@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" ng-app="pencilblueApp">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <title>Jobs at [Company]</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+
+  <link rel="shortcut icon" href="img/favicon.png">
+
+  <link rel="stylesheet" type="text/css" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/bower_components/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/css/general_styles.css">
+  <link rel="stylesheet" type="text/css" href="assets/public/tn_job/version/99ce40f875dcf388fba9753bf5e039227ee7c405/css/tn_job_styles.css">
+  <!-- <link rel="stylesheet" type="text/css" href=""> -->
+  <link rel="stylesheet" type="text/css" href="assets/public/premium/css/premium_custom_styles.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script type="text/javascript" src="assets/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/compiled_bower/required_bower_scripts.min.js"></script>
+</head>
+<body id="premium-body" ng-controller="PencilBlueController">
+
+
+  <div id="src-tracking-loader" ng-controller="SourceTrackingFrontController"></div>
+
+  <div id="job-details-page" ng-controller="DetailsController">
+
+    <!-- Internals section -->
+    <section class="internals-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12">
+            <!-- Job details view -->
+            <div class="container jdp-breadcrumb-container">
+              <div id="jdp-breadcrumb-row" class="row">
+                <div class="hidden-xs col-sm-12">
+                  <ol class="breadcrumb">
+                    <li class="bread-crumb-item"><a href="#" class="bread-crumb-item-link">[Company] Careers</a></li>
+                    <li class="bread-crumb-item"><a href="#" class="bread-crumb-item-link">All Jobs</a></li>
+                    <li class="bread-crumb-item"><a href="#" class="bread-crumb-item-link">Seattle, WA</a></li>
+                    <li class="bread-crumb-item"><a href="#" class="bread-crumb-item-link">Information Technology</a></li>
+
+                  </ol>
+                </div>
+              </div>
+
+            </div>
+            <div id="jdp-title-container" class="jdp-title-container">
+              <div class="jdp-title-container-overlay">
+                <div class="container">
+                  <div class="row jdp-title-bar-row">
+                    <div class="col-sm-12">
+                      <div class="jdp-title-inner-container">
+                        <div class="jdp-title-block-position">
+                          <h1 id="jdp-title-job-title" class="jdp-job-title"><span class="jdp-title-job-title">Software Engineer (Software Developer)</span>
+                            <span class="jdp-title-job-in">in</span> <span class="jdp-title-job-location">Seattle, WA</span>
+                            <span class="jdp-title-job-at">at</span> <span class="jdp-title-job-company">[Company] Careers</span></h1>
+
+
+                            <div id="jdp-title-date-posted" class="job-date-posted">
+                              <strong>Date Posted:</strong> 4/8/2017
+                            </div>
+
+                          </div>
+                          <div class="jdp-top-apply-block-position">
+                            <div id="jdp-apply-section-top" class="jdp-apply-section">
+                              <a id="jdp-apply-button-top" ng-click="registerApplyStartEvent($event)" ng-href="{{ applyURL }}"
+                              class="primary-button block-element">Apply</a>
+                              <a id="jdp-not-ready-to-apply-link-top" href="#" class="jdp-join-link">Not ready to Apply?</a>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div class="job-details-content">
+                <div class="container">
+                  <div class="row">
+                    <!-- Right Column -->
+                    <div class="jdp-right-column col-md-4 col-md-push-8">
+                      <!-- Social Sharing -->
+                      <div id="jdp-social-sharing-section" class="hidden-sm hidden-xs">
+
+                      </div>
+                      <!-- Snapshot-->
+                      <div id="jdp-job-snapshot-section">
+                        <div class="jdp-job-snapshot-card content-card">
+                          <h2 class="content-card-header">Job Snapshot</h2>
+                          <ul class="snapshot-padding">
+                            <!-- Employee Type-->
+                            <li class="job-employee-type">
+                              <span class="glyphicon glyphicon-hourglass snapshot-icon secondary-text-color"></span>
+
+                              <div class="snapshot-text">
+                                <strong>Employee Type:</strong><br/>
+
+                                <div class="secondary-text-color">Full-Time</div>
+                              </div>
+                            </li>
+
+                            <!-- Location -->
+                            <li class="job-location">
+                              <i class="glyphicon glyphicon-map-marker snapshot-icon secondary-text-color"></i>
+
+                              <div class="snapshot-text">
+                                <strong>Location:</strong><br/>
+                                <div class="secondary-text-color"></div>
+                                <a class="secondary-text-color job-snapshot-link"
+                                href="#">
+                                <span class="jobLocation">Seattle, WA</span>
+                              </a>
+                            </div>
+                          </li>
+
+                          <!-- Job Type -->
+                          <li class="job-categories">
+                            <span class="glyphicon glyphicon-triangle-top snapshot-icon secondary-text-color"></span>
+
+                            <div class="snapshot-text">
+                              <strong>Job Type:</strong><br/>
+                              <a class="secondary-text-color job-snapshot-link"
+                              href="#">Information Technology</a>
+                            </div>
+                          </li>
+
+                          <!-- Experience -->
+                          <li class="job-experience">
+                            <i class="fa fa-briefcase snapshot-icon secondary-text-color"></i>
+
+                            <div class="snapshot-text">
+                              <strong>Experience:</strong><br/>
+
+                              <div class="secondary-text-color">Not Specified</div>
+                            </div>
+                          </li>
+
+                          <!-- Date Posted -->
+                          <li class="job-date-posted">
+                            <i class="fa fa-clock-o snapshot-icon secondary-text-color"></i>
+
+                            <div class="snapshot-text">
+                              <strong>Date Posted:</strong><br/>
+
+                              <div class="secondary-text-color">4/8/2017</div>
+                            </div>
+                          </li>
+
+                          <!-- Job ID -->
+
+                        </ul>
+                      </div>
+
+                    </div>
+                    <!-- JDP Media Section-->
+                    <div id="jdp-media-content-section" class="hidden-sm hidden-xs">
+
+                    </div>
+                    <!-- About Us -->
+                    <div id="jdp-about-us-section" class="hidden-sm hidden-xs">
+
+                    </div>
+                  </div>
+
+                  <!-- Left Column -->
+                  <div class="jdp-left-column col-md-8 col-md-pull-4">
+                    <!-- Job Description -->
+                    <div id="jdp-job-description-section">
+                      <div class="jdp-job-description-card content-card">
+                        <h2 class="content-card-header">Job Description</h2>
+                        <div><p>If you are a highly motivated and detail-oriented person who is good at problem solving and wants an opportunity to work in a team environment, then join our Corporate Applications development team!  We have an opening for a Software Engineer on an IT team that supports various internal customers.  This is a great opportunity to work on a team experienced in following Agile SCRUM methodology, help to migrate our infrastructure to MVC, Service Oriented Architecture, and use Open Source framework including Ruby on Rails.  This team is responsible for developing and supporting multiple internal services that are critical to daily activities of various groups within CareerBuilder.<br /><br /> <br />We are seeking a self-directed and flexible Software Engineer with excellent communication skills who will design and implement solutions in .NET or other Open Source framework tools to solve business problems on a company-wide scale. You will work on the analysis, design and implementation of solutions to meet a multitude of CareerBuilder’s business needs. If you are an industrious, well-natured professional and want to work in an enterprising and stimulating environment, then CareerBuilder may be the right place you!<br /><br /><b>.NET Developer – Software Engineer (Software Developer)</b><br /><br /><b>Job Responsibilities:</b><br /><br />As a Software Engineer, you will work with other developers and participate in the architecture and design of user interfaces, business objects and overall infrastructure. You will also communicate openly with team leads and other team members in relation to the status of projects and express your thoughts, accomplishments and roadblocks in daily meetings.<br /><br /><b>Additional responsibilities for the Software Engineer include:</b><br /><br />• Maintaining and creating business objects & web services for an N-tier 24x7 production environment<br />• Developing web pages and web services<br />• Creating and maintaining customized software modules<br />• Ensuring that customer expectations are clear and deadlines are met<br />• Embracing agile lean development methodology for providing fast and efficient delivery of solutions<br />• Investigating and resolving customer and platform related issues<br />• Creating and modifying Tables and Data</p></div>
+                        <div>TSR ID:001835--</div>
+                      </div>
+
+                    </div>
+                    <!-- Job Requirements -->
+                    <div id="jdp-job-requirements-section">
+                      <div class="jdp-job-requirements-card content-card">
+                        <h2 class="content-card-header">Job Requirements</h2>
+                        <p><b>.NET Developer – Software Engineer (Software Developer)</b><br /><br />As a Software Engineer, you must be a tenacious and structured individual who has very good object-oriented knowledge and great communication skills. You must also show leadership skills and strive to address problems proactively, methodically and candidly.<br /><br />Additional requirements of the Software Engineer include:<br />* Bachelor’s degree in Computer Science, Computer Systems or other related field<br />* Familiarity with VB.NET, SQL, Javascript, AJAX, Web Services, ASP.NET, HTTP and/or XML<br />* Experience developing frontend web pages is a plus<br />* Experience using Open Source tools like Ruby on Rails is a plus<br /><br /><b>Benefits</b><br /><br /><b>We’re All About You!</b><br /><br />When you're focused on the goal, not the path – you can be more flexible, and that translates into more productive and satisfied employees. From flexible hours to volunteering during work hours to diverse education opportunities, CareerBuilder.com is committed to helping employees strike a balance.<br /><br /><b>Here are just some of the Truly Amazing benefits we offer:</b><br /><br />• World-Class Training that positions you to hit the ground running with ongoing learning and development courses; we never stop investing in our people.<br />• Comprehensive Medical, Dental & Vision Programs<br />• Education Reimbursement Program allowing up to $5k per year towards completion of a Bachelor’s and non-MBA graduate degree, and up to $10K per year towards completion of an MBA!  No strings attached!<br />• $400 Annual Reimbursement for Wellness Activities, including your gym membership!<br />• 401(k) Program with Strong Employer Match and 2 year vesting schedule!<br />• Summer Hours – From July 1st through end of August your weekends start at 12pm on Fridays!<br />• Five Star Company Paid Trips-if you hit your numbers, pack your bags and get ready to experience luxury!<br /><br />CareerBuilder, LLC is proud to be an Equal Opportunity Employer. Applicants are considered for all positions without regard to race, color, religion, sex, national origin, age, disability, sexual orientation, ancestry, marital or veteran status.</p>
+                      </div>
+
+                    </div>
+                    <!-- Desktop Apply Now Section-->
+                    <div id="jdp-bottom-apply-section">
+                      <div class="jdp-bottom-apply-card content-card">
+                        <div class="row">
+                          <div id="jdp-bottom-apply-company-logo-col" class="col-sm-3">
+
+                          </div>
+                          <div class="col-sm-3 col-md-5"></div>
+                          <div id="jdp-bottom-apply-button-col" class="col-sm-6 col-md-4">
+                            <div id="jdp-apply-section-bottom" class="jdp-apply-section">
+                              <a id="jdp-apply-button-bottom" ng-click="registerApplyStartEvent($event)" ng-href="{{ applyURL }}"
+                              class="primary-button block-element">Apply</a>
+                              <a id="jdp-not-ready-to-apply-link-bottom" href="#" class="jdp-join-link">Not ready to Apply?</a>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <div id="jdp-similar-jobs-row" class="row similar-jobs-container" >
+                  <div class="col-sm-12">
+                    <h3><b>CHECK OUT OUR SIMILAR JOBS</b></h3>
+                    <ol class="similar-jobs">
+                      <li class="similar-job-element"><a href="#" class="similar-jobs-tag">Software Engineer Jobs</a></li>
+                      <li class="similar-job-element"><a href="#" class="similar-jobs-tag">Project Engineer Jobs</a></li>
+
+                    </ol>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <!-- End Job details view -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Internals section -->
+  </div>
+
+  <!-- Footer -->
+  <footer>
+  </footer>
+  <!-- End Footer -->
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX9bDtzse0NKvnFFtJOY-G3DJMwSuZzHg&libraries=places"></script>
+  <script type="text/javascript" src="assets/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/angular/scripts/tn_scripts.min.js"></script>
+
+  <script type="text/javascript" src="assets/extensions/ruler/Event.js"></script>
+  <script type="text/javascript" src="assets/extensions/ruler/Dragdrop.js"></script>
+  <script type="text/javascript" src="assets/extensions/ruler/RulersGuides.js"></script>
+  <script type="text/javascript">
+  var evt = new Event(),
+  dragdrop = new Dragdrop(evt),
+  rg = new RulersGuides(evt, dragdrop);
+  </script>
+
+  <!-- Bootstrap Grid -->
+  <div id="forh-bs-grid" style="position: fixed; top: 0px; left: 0px; z-index: 1000000; width: 100%; height: 100%; pointer-events: none; display:none">
+    <div class="container" style="height: 100%">
+      <div class="row" style="height: 100%">
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">1</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">2</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">3</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">4</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">5</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">6</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">7</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">8</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">9</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">10</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">11</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">12</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Bootstrap Grid -->
+
+  <!-- Bootstrap Grid Switch -->
+  <div class="grid-switch">
+    <script type="text/javascript" src="assets/extensions/bootstrap-grid/extension.js"></script>
+    <link rel="stylesheet" href="assets/extensions/bootstrap-grid/style.css">
+
+    <label class="switch">
+      <input type="checkbox" id="bootstrap-grid" onclick="TurnOnOff();">
+      <span class="slider round"></span>
+    </label>
+  </div>
+  <!-- Bootstrap Grid Switch -->
+
+</body>
+</html>

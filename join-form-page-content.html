@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" ng-app="pencilblueApp">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <title>Jobs at [Company]</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+
+  <link rel="shortcut icon" href="img/favicon.png">
+
+  <link rel="stylesheet" type="text/css" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/bower_components/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/css/general_styles.css">
+  <link rel="stylesheet" type="text/css" href="assets/public/tn_join/version/99ce40f875dcf388fba9753bf5e039227ee7c405/css/tn_join_styles.css">
+  <!-- <link rel="stylesheet" type="text/css" href=""> -->
+  <link rel="stylesheet" type="text/css" href="assets/public/premium/css/premium_custom_styles.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <script type="text/javascript" src="assets/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/compiled_bower/required_bower_scripts.min.js"></script>
+</head>
+
+<body id="premium-body" ng-controller="PencilBlueController">
+
+  <div id="src-tracking-loader" ng-controller="SourceTrackingFrontController"></div>
+
+  <!-- Internals section -->
+  <section class="internals-section">
+    <!-- Join Form Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-12">
+          <!-- Join form -->
+
+          <div id="join-entire-page-content">
+            <div id="join-page-header" class="row" ng-show="vm.showForm" class="animate-show">
+              <div ng-class="vm.joinFormTitleClass">
+                <h1 class="join-form-header text-weight-bolder text-uppercase text-center primary-text-color">
+                  Join Our Talent Network</h1>
+                </div>
+              </div>
+              <div id="join-page-body" class="row" ng-show="vm.showForm" class="animate-show">
+                <div id="join-page-content-section" ng-class="vm.tnBlurbClass" ng-show="vm.showTNBlurb">
+                  <strong>Why Join Our Talent Network? </strong><br /><br /><p style="text-align: justify; line-height: 20px;">Joining our Talent Network will enhance your job search and application process. Whether you choose to apply or just leave your information, we look forward to staying connected with you. <br /></p><ul style="line-height: 20px;"><li>Receive alerts with new job opportunities that match your interests</li><li>Receive relevant communications and updates from our organization</li><li>Share job opportunities with family and friends through Social Media or email</li></ul><strong>Join our Talent Network today!</strong><br /><br /><a href="/en-US/privacy-policy" style="text-align: center; font-size:11px;">Privacy Policy</a><br /><a href="/en-US/terms-and-conditions" style="text-align: center; font-size:11px;">Terms and Conditions</a>
+                </div>
+                <div id="join-form-body" ng-class="vm.formBodyClass">
+
+                  <form name="joinForm" ng-submit="vm.onSubmit(joinForm)" ng-show="vm.formLoaded" class="animate-show" novalidate>
+                    <formly-form model="vm.model" fields="vm.formFields" options="vm.options">
+                      <br>
+                      <div id="join-apply-block" class=" hidden-xs join-button-footer-container">
+                        <div class="text-right join-is-not-apply">
+                          By joining our Talent Network you have not officially applied to a position.
+                        </div>
+                        <div class="text-right join-button-container">
+                          <input id="join-button" class="btn primary-button join-button text-weight-bold text-uppercase" type="submit"
+                          value="Join"/>
+                        </div>
+                      </div>
+                      <div id="join-apply-block-mobile" class="hidden-sm hidden-md hidden-lg">
+                        <br>
+                        <div class="text-right">
+                          <input id="join-button-mobile" class="btn primary-button join-button-mobile text-weight-bold text-uppercase"
+                          type="submit"
+                          value="Join"/>
+                        </div>
+                        <div class="text-right join-is-not-apply-mobile">
+                          By joining our Talent Network you have not officially applied to a position.
+                        </div>
+                        <br>
+                      </div>
+                    </formly-form>
+                  </form>
+
+                </div>
+              </div>
+
+            </div>
+
+            <!-- End Join form -->
+          </div>
+        </div>
+      </div>
+      <!-- End Join Form Page Content -->
+
+    </section>
+    <!-- End Internals section -->
+
+
+    <!-- <script src="//apis.google.com/js/client.js"></script>
+    <script src="//apis.google.com/js/api.js"></script> -->
+
+    <script type="text/javascript" src="assets/public/cms_base/version/99ce40f875dcf388fba9753bf5e039227ee7c405/compiled_bower/join_bower_scripts.min.js"></script>
+
+    <!-- <script type="text/javascript" src="https://www.dropbox.com/static/api/2/dropins.js" id="dropboxjs" data-app-key="0ny437ravitnjwo"></script>
+    <script type="text/javascript" src="assets/public/tn_join/version/99ce40f875dcf388fba9753bf5e039227ee7c405/angular/join_form/formly_config.js"></script> -->
+
+    <style>
+    input[type=date]{
+      color: #555 !important;
+    }
+  </style>
+
+
+  <!-- Footer -->
+  <footer>
+  </footer>
+  <!-- End Footer -->
+
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX9bDtzse0NKvnFFtJOY-G3DJMwSuZzHg&libraries=places"></script>
+  <script type="text/javascript" src="assets/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/angular/scripts/tn_scripts.min.js"></script>
+
+  <script type="text/javascript" src="assets/extensions/ruler/Event.js"></script>
+  <script type="text/javascript" src="assets/extensions/ruler/Dragdrop.js"></script>
+  <script type="text/javascript" src="assets/extensions/ruler/RulersGuides.js"></script>
+  <script type="text/javascript">
+    var evt = new Event(),
+    dragdrop = new Dragdrop(evt),
+    rg = new RulersGuides(evt, dragdrop);
+  </script>
+
+  <!-- Bootstrap Grid -->
+  <div id="forh-bs-grid" style="position: fixed; top: 0px; left: 0px; z-index: 1000000; width: 100%; height: 100%; pointer-events: none; display:none">
+    <div class="container" style="height: 100%">
+      <div class="row" style="height: 100%">
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">1</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">2</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">3</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">4</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">5</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">6</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">7</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">8</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">9</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">10</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">11</div>
+        </div>
+        <div class="col-sm-1" style="position: relative; height: 100%; background-color: rgba(76, 199, 142, 0.2);">
+          <div style="display: flex; justify-content: center; height: 100%; background-color:rgba(199, 142, 76, 0.2); opacity: 0.8">12</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- End Bootstrap Grid -->
+
+  <!-- Bootstrap Grid Switch -->
+  <div class="grid-switch">
+    <script type="text/javascript" src="assets/extensions/bootstrap-grid/extension.js"></script>
+    <link rel="stylesheet" href="assets/extensions/bootstrap-grid/style.css">
+
+    <label class="switch">
+      <input type="checkbox" id="bootstrap-grid" onclick="TurnOnOff();">
+      <span class="slider round"></span>
+    </label>
+  </div>
+  <!-- Bootstrap Grid Switch -->
+
+</body>
+</html>

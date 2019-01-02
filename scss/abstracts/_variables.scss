@@ -1,0 +1,68 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+///font-variables
+$primary-font: 'Open Sans', sans-serif;
+$secondary-font: 'Montserrat', sans-serif;
+
+/// Copy text color
+/// @type Color
+$text-color: #222222 !default;
+
+//color on variables
+$white: #fff;
+$black: #000;
+$grey: #e8eaeb;
+$grey-divider: #ccc;
+$wrongurl-color: #eee;
+
+// *** External Vendor Design ***
+// $grey-divider: #eaeaea;
+// *** End External Vendor Design ***
+
+// Company color pallete
+$primary-color: #0d3b69;
+$secondary-color: #2d88c1;
+$third-color: #ffcc00;
+$fourth-color: #333;
+$btn-color: $third-color;
+$hover-color: $secondary-color;
+$facets-color: $secondary-color;
+$facets-title: $primary-color;
+$body-color: $white;
+
+/// For full facets
+$full-facet: false;
+/// End For full facets
+
+/// For search box (Label inline)
+$label-inline: false;
+/// End For search box (Label inline)
+
+/// For search small (similar as the mobile search)
+$search-small: false;
+/// End For search small (similar as the mobile search)
+
+/// For search small (similar as the mobile search)
+$external-design: false;
+/// End For search small (similar as the mobile search)
+
+/// Container's maximum width
+/// @type Length
+/// $max-width: 1180px !default;
+
+/// Breakpoints map
+/// @prop{String} keys - Keys are identifiers mapped to a given length
+/// @prop{Map} values - Values are actual breakpoints expressed in pixels
+//// $breakpoints: (
+///   'small': 320px,
+///   'medium': 768px,
+///   'large': 1024px,
+//// ) !default;
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;

@@ -1,0 +1,421 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles of search box and parent items
+// -----------------------------------------------------------------------------
+
+// Search Mobile
+.search-mobile{
+  background-color: $secondary-color;
+
+  // Search box
+  .search-box{
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    // Search box content
+    .search-box-content{ //
+    }
+    // End Search box content
+  }
+  // End Search box
+
+  // Search bar
+  #search-bar{
+    max-width: 480px;
+    margin: 0 auto;
+
+    // Search bar elements
+    .search-bar-element{
+      padding-bottom: 15px;
+      padding-left: 0px;
+      padding-right: 0px;
+
+      input{
+        font-size: 16px;
+        color: $text-color;
+        height: 40px;
+        border: none;
+        border-radius: 0px;
+        text-align: center;
+
+        // Remove X icon from IE
+        &::-ms-clear {
+          display: none;
+        }
+        // End Remove X icon from IE
+
+        @include placeholder{
+          color: $text-color;
+        }
+      }
+
+      // Search button container
+      &.search-widget-container{
+
+        // Search button
+        .search-btn{
+          display: block;
+          text-transform: none; // <-- Override TN_JOB property
+
+          @include on-event{
+          }
+        }
+        // End Search button
+      }
+      // Search button container
+    }
+    // End Search bar elements
+  }
+  // End Search bar
+
+  // View all jobs container
+  .link-center{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+
+    // View all jobs
+    .view-all-jobs{
+      color: $primary-color;
+      font-weight: bold;
+    }
+    // End View all jobs
+  }
+  // End View all jobs container
+}
+// End Search Mobile
+
+//
+// Extend Search
+//
+
+// Search desktop home
+.search-desktop-home{
+  @extend .search-mobile;
+  background-color: transparent;
+}
+// End Search desktop home
+
+// Search desktop
+.search-desktop{
+  @extend .search-desktop-home;
+}
+// End Search desktop
+
+// Search Widget (Search & Re-Engage)
+#search-widget{
+  @extend .search-mobile;
+  position: relative;
+  top: auto;
+  bottom: auto;
+  left: auto;
+  right: auto;
+  background-color: $secondary-color;
+
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+  #search-bar{
+    .search-bar-element{
+      &.search-widget-container{
+        .search-btn{
+
+          @include on-event{
+          }
+        }
+      }
+    }
+  }
+}
+// End Search Widget (Search & Re-Engage)
+
+//
+// End Extend Search
+//
+
+@media (min-width: 768px){
+
+  /// This is a fix for element not using its full space
+  .search-mobile{
+    float: none;
+    background-size: cover;
+    padding: 0px;
+  }
+
+  // Search desktop home
+  .search-desktop-home, #search-widget{
+    position: absolute;
+    bottom: 70px;
+    top: auto;
+    right: 0px;
+    left: 0px;
+
+    h1{
+      color: $white;
+      text-align: left;
+      margin: 0px;
+      padding-bottom: 10px;
+    }
+
+    // Search box
+    .search-box{
+      padding-top: 0px;
+      padding-bottom: 0px;
+
+      // Search box content
+      .search-box-content{
+        background-color: rgba(0,0,0,0.5);
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left: 30px;
+        padding-right: 30px;
+
+        // For search small (similar as the mobile search)
+        @if $search-small{
+          max-width: 480px;
+          margin: 0 auto;
+        }
+        // End For search small (similar as the mobile search)
+      }
+      // End Search box content
+
+    }
+    // End Search box
+
+    // Search bar
+    #search-bar{
+      max-width: none;
+      display: table;
+
+      // For search small (similar as the mobile search)
+      @if $search-small{
+        display: block;
+      }
+      // End For search small (similar as the mobile search)
+
+      // Search bar elements
+      .search-bar-element{
+        display: table-cell;
+        vertical-align: bottom;
+        width: 50%;
+        padding-right: 15px;
+        padding-left: 0px;
+        padding-bottom: 0px;
+
+        // For search small (similar as the mobile search)
+        @if $search-small{
+          display: block;
+          vertical-align: middle;
+          width: 100%;
+          padding-left: 0px;
+          padding-right: 0px;
+          padding-bottom: 15px;
+        }
+        // End For search small (similar as the mobile search)
+
+        input{
+          text-align: left;
+
+          @include placeholder{
+          }
+        }
+
+        label{
+          color: $white;
+          font-weight: bold;
+          text-transform: capitalize;
+        }
+
+        // Search button container
+        &.search-widget-container{
+          padding-bottom: 0px;
+          padding-right: 0px;
+
+          // For search small (similar as the mobile search)
+          @if $search-small{
+            padding-bottom: 15px;
+          }
+          // End For search small (similar as the mobile search)
+
+          // Search button
+          .search-btn{
+            width: 170px;
+
+            // For search small (similar as the mobile search)
+            @if $search-small{
+              margin: 0 auto;
+            }
+            // End For search small (similar as the mobile search)
+
+            @include on-event{
+            }
+          }
+          // End Search button
+        }
+        // End Search button container
+      }
+      // End Search bar elements
+    }
+    // End Search bar
+
+    // View all jobs container
+    .link-center{
+      padding-top: 10px;
+
+      // View all jobs
+      .view-all-jobs{
+      }
+      // End View all jobs
+    }
+    // End View all jobs container
+  }
+  // End Search desktop home
+
+  // Search desktop & Search Widget (Search & Re-Engage)
+  .search-desktop, #search-widget{
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+
+    background-color: $secondary-color;
+
+    h1{
+      color: $white;
+      text-align: left;
+    }
+
+    // Search box
+    .search-box{
+      // Search box content
+      .search-box-content{
+        background-color: transparent;
+        // padding-right: 15px;
+        // padding-left: 15px;
+
+        // For search small (similar as the mobile search)
+        @if $search-small{
+          max-width: none;
+          padding-left: 0px;
+          padding-right: 0px;
+        }
+        // End For search small (similar as the mobile search)
+      }
+      // End Search box content
+    }
+    // End Search box
+
+    // Search bar
+    #search-bar{
+
+      // For search small (similar as the mobile search)
+      @if $search-small{
+        max-width: none;
+        display: table;
+      }
+      // End For search small (similar as the mobile search)
+
+      // Search bar elements
+      .search-bar-element{
+
+        // For search small (similar as the mobile search)
+        @if $search-small{
+          display: table-cell;
+          vertical-align: bottom;
+          width: 50%;
+          padding-right: 15px;
+          padding-left: 0px;
+          padding-bottom: 0px;
+        }
+        // End For search small (similar as the mobile search)
+
+        input{
+
+          @include placeholder{
+          }
+        }
+
+        label{
+          color: $white;
+        }
+
+        // Search button container
+        &.search-widget-container{
+
+          // For search small (similar as the mobile search)
+          @if $search-small{
+            padding-bottom: 0px;
+            padding-right: 0px;
+          }
+          // End For search small (similar as the mobile search)
+
+          // Search button
+          .search-btn{
+            background-color: shade($third-color, 25%);
+
+            @include on-event{
+              background-color: shade($third-color, 50%);
+            }
+          }
+          // End Search button
+        }
+        // End Search button container
+      }
+      // End Search bar elements
+    }
+    // End Search bar
+
+    // View all jobs container
+    .link-center{
+
+      // View all jobs
+      .view-all-jobs{
+        color: $white;
+      }
+      // End View all jobs
+    }
+    // End View all jobs container
+  }
+  // End Search desktop & Search Widget (Search & Re-Engage)
+
+  // Search Widget (Search & Re-Engage)
+  #search-widget{
+    padding: 20px 15px 30px 15px;
+  }
+  // End Search Widget (Search & Re-Engage)
+}
+
+@media (min-width:992px){
+
+}
+
+@media (min-width: 1200px){
+
+  @if $label-inline {
+    // Search desktop home
+    .search-desktop-home, #search-widget{
+      // Search bar
+      #search-bar{
+        // Search bar elements
+        .search-bar-element{
+          padding-right: 15px;
+
+          input{
+            width: 75%;
+            display: inline;
+          }
+
+          label{
+            display: inline;
+            width: 25%;
+            padding-right: 10px - 5px; // <- Always (5px)
+          }
+        }
+        // End Search bar elements
+      }
+      // End Search bar
+    }
+    // End Search desktop home
+  }
+
+}
