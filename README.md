@@ -1,12 +1,12 @@
-# **_Premium Site Template_**
+# **Premium Theme**
 
 ## **Landing Page**
 
 ### Bootstrap v3.3.7
->assets/bower_components/bootstrap/dist/css/bootstrap.min.css
+>/assets/bower_components/bootstrap/dist/css/bootstrap.min.css
 
 ### Font Awesome 4.7.0
->assets/bower_components/fontawesome/css/font-awesome.min.css
+>/assets/bower_components/fontawesome/css/font-awesome.min.css
 
 ### General Styles v.935a51c32c21711dedacab4a6359b01c78d0912f
 >/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/css/general_styles.css
@@ -29,10 +29,10 @@
 ## **Pages and Internals**
 
 ### Bootstrap v3.3.7
->assets/bower_components/bootstrap/dist/css/bootstrap.min.css
+>/assets/bower_components/bootstrap/dist/css/bootstrap.min.css
 
 ### Font Awesome 4.7.0
->assets/bower_components/fontawesome/css/font-awesome.min.css
+>/assets/bower_components/fontawesome/css/font-awesome.min.css
 
 ### General Styles v.935a51c32c21711dedacab4a6359b01c78d0912f
 >/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/css/general_styles.css
@@ -57,10 +57,10 @@
 ## **Join Form**
 
 ### Bootstrap v3.3.7
->assets/bower_components/bootstrap/dist/css/bootstrap.min.css
+>/assets/bower_components/bootstrap/dist/css/bootstrap.min.css
 
 ### Font Awesome 4.3.0
->assets/bower_components/fontawesome/css/font-awesome.min.css
+>/assets/bower_components/fontawesome/css/font-awesome.min.css
 
 ### General Styles v.935a51c32c21711dedacab4a6359b01c78d0912f
 >/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/css/general_styles.css
@@ -95,8 +95,8 @@
 ## **Footer Scripts Join Form**
 
 ### Google API's
->https://apis.google.com/js/client.js
->https://apis.google.com/js/api.js
+> https://apis.google.com/js/client.js
+> https://apis.google.com/js/api.js
 
 ### Join Bower Scripts :package: v.99ce40f875dcf388fba9753bf5e039227ee7c405
 - AngularJS v1.4.14
