@@ -18,11 +18,11 @@ h5 {
   text-transform: none;
 }
 
-h1, .internals-titles, .error-card h1, #join-entire-page-content .join-form-header, #jfi-modal-dialog .join-form-header, .jfi-success-container .join-form-header, #cb-legal-content-block h1, #browse-by-container #browse-by-header, #browse-by-container #browse-by-header p, #after-apply-thank-you-header, #edit-preference-view #edit-preference-title, #subscription-title, .search-results-title, .jdp-title-inner-container .jdp-title-block-position .jdp-job-title {
+h1, .internals-titles, .error-card h1, #join-entire-page-content .join-form-header, #jfi-modal-dialog .join-form-header, .jfi-success-container .join-form-header, #cb-legal-content-block h1, #cb-legal-content-block #cookiesPolicy h2, #cb-legal-content-block #cookiesList h2, #cb-legal-content-block #cookiesPolicy h3, #cb-legal-content-block #cookiesList h3, #browse-by-container #browse-by-header, #browse-by-container #browse-by-header p, #after-apply-thank-you-header, #edit-preference-view #edit-preference-title, #subscription-title, .search-results-title, .jdp-title-inner-container .jdp-title-block-position .jdp-job-title {
   text-transform: uppercase;
 }
 
-p {
+p, #cb-legal-content-block #cookiesPolicy p, #cb-legal-content-block #cookiesList p {
   color: #222222;
   word-wrap: break-word;
 }
@@ -182,6 +182,10 @@ ul.aligned-list {
     -webkit-transform: translateX(0);
     transform: translateX(0);
   }
+}
+
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+  max-height: none;
 }
 
 .top-social {
@@ -508,7 +512,7 @@ ul.aligned-list {
     border: none;
     border-radius: 0px;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 0px;
   }
   .navbar-default ul.navbar-nav li.dropdown.open ul.dropdown-menu > li, .navbar-default ul.navbar-nav li.dropdown ul.dropdown-menu > li {
     border: none;
@@ -517,6 +521,7 @@ ul.aligned-list {
     color: #fff;
     word-break: break-word;
     white-space: normal;
+    display: inline-block;
   }
 }
 
@@ -541,9 +546,6 @@ ul.aligned-list {
   }
   .navbar-default ul.navbar-nav li a, .navbar-default ul.navbar-nav .open ul.dropdown-menu > li > a, .navbar-default ul.navbar-nav ul.dropdown-menu > li > a {
     font-size: 18px;
-  }
-  .navbar-default ul.navbar-nav li.dropdown.open ul.dropdown-menu, .navbar-default ul.navbar-nav li.dropdown ul.dropdown-menu {
-    margin-top: 23px;
   }
 }
 
@@ -866,6 +868,7 @@ ul.aligned-list {
   height: 40px;
   border: none;
   border-radius: 0px;
+  text-align: center;
 }
 
 .search-mobile #search-bar .search-bar-element input::-ms-clear, .search-desktop-home #search-bar .search-bar-element input::-ms-clear, .search-desktop #search-bar .search-bar-element input::-ms-clear, #search-widget #search-bar .search-bar-element input::-ms-clear {
@@ -891,11 +894,6 @@ ul.aligned-list {
 .search-mobile #search-bar .search-bar-element.search-widget-container .search-btn, .search-desktop-home #search-bar .search-bar-element.search-widget-container .search-btn, .search-desktop #search-bar .search-bar-element.search-widget-container .search-btn, #search-widget #search-bar .search-bar-element.search-widget-container .search-btn {
   display: block;
   text-transform: none;
-  background-color: #bf9900;
-}
-
-.search-mobile #search-bar .search-bar-element.search-widget-container .search-btn:hover, .search-desktop-home #search-bar .search-bar-element.search-widget-container .search-btn:hover, .search-desktop #search-bar .search-bar-element.search-widget-container .search-btn:hover, #search-widget #search-bar .search-bar-element.search-widget-container .search-btn:hover, .search-mobile #search-bar .search-bar-element.search-widget-container .search-btn:active, .search-desktop-home #search-bar .search-bar-element.search-widget-container .search-btn:active, .search-desktop #search-bar .search-bar-element.search-widget-container .search-btn:active, #search-widget #search-bar .search-bar-element.search-widget-container .search-btn:active, .search-mobile #search-bar .search-bar-element.search-widget-container .search-btn:focus, .search-desktop-home #search-bar .search-bar-element.search-widget-container .search-btn:focus, .search-desktop #search-bar .search-bar-element.search-widget-container .search-btn:focus, #search-widget #search-bar .search-bar-element.search-widget-container .search-btn:focus {
-  background-color: #806600;
 }
 
 .search-mobile .link-center, .search-desktop-home .link-center, .search-desktop .link-center, #search-widget .link-center {
@@ -967,7 +965,7 @@ ul.aligned-list {
     padding-bottom: 0px;
   }
   .search-desktop-home #search-bar .search-bar-element input, .search-desktop #search-bar .search-bar-element input, #search-widget #search-bar .search-bar-element input {
-    height: 46px;
+    text-align: left;
   }
   .search-desktop-home #search-bar .search-bar-element label, .search-desktop #search-bar .search-bar-element label, #search-widget #search-bar .search-bar-element label {
     color: #fff;
@@ -979,19 +977,10 @@ ul.aligned-list {
     padding-right: 0px;
   }
   .search-desktop-home #search-bar .search-bar-element.search-widget-container .search-btn, .search-desktop #search-bar .search-bar-element.search-widget-container .search-btn, #search-widget #search-bar .search-bar-element.search-widget-container .search-btn {
-    background-color: #226691;
     width: 170px;
-    padding: 8px 15px;
-  }
-  .search-desktop-home #search-bar .search-bar-element.search-widget-container .search-btn:hover, .search-desktop #search-bar .search-bar-element.search-widget-container .search-btn:hover, .search-desktop-home #search-bar .search-bar-element.search-widget-container .search-btn:active, .search-desktop #search-bar .search-bar-element.search-widget-container .search-btn:active, .search-desktop-home #search-bar .search-bar-element.search-widget-container .search-btn:focus, .search-desktop #search-bar .search-bar-element.search-widget-container .search-btn:focus, #search-widget #search-bar .search-bar-element.search-widget-container .search-btn:hover, #search-widget #search-bar .search-bar-element.search-widget-container .search-btn:active, #search-widget #search-bar .search-bar-element.search-widget-container .search-btn:focus {
-    background-color: #174461;
   }
   .search-desktop-home .link-center, .search-desktop .link-center, #search-widget .link-center {
     padding-top: 10px;
-  }
-  .search-desktop-home .link-center .view-all-jobs, .search-desktop .link-center .view-all-jobs, #search-widget .link-center .view-all-jobs {
-    color: #fff;
-    font-weight: bold;
   }
   .search-desktop, #search-widget {
     position: relative;
@@ -1092,14 +1081,14 @@ ul.aligned-list {
   border: none;
 }
 
-.internals-titles, .error-card h1, #join-entire-page-content .join-form-header, #jfi-modal-dialog .join-form-header, .jfi-success-container .join-form-header, #cb-legal-content-block h1, #browse-by-container #browse-by-header, #browse-by-container #browse-by-header p, #after-apply-thank-you-header, #edit-preference-view #edit-preference-title, #subscription-title, .search-results-title, .jdp-title-inner-container .jdp-title-block-position .jdp-job-title {
-  font-size: 24px;
+.internals-titles, .error-card h1, #join-entire-page-content .join-form-header, #jfi-modal-dialog .join-form-header, .jfi-success-container .join-form-header, #cb-legal-content-block h1, #cb-legal-content-block #cookiesPolicy h2, #cb-legal-content-block #cookiesList h2, #cb-legal-content-block #cookiesPolicy h3, #cb-legal-content-block #cookiesList h3, #browse-by-container #browse-by-header, #browse-by-container #browse-by-header p, #after-apply-thank-you-header, #edit-preference-view #edit-preference-title, #subscription-title, .search-results-title, .jdp-title-inner-container .jdp-title-block-position .jdp-job-title {
+  font-size: 24px !important;
+  color: #0d3b69 !important;
+  margin-top: 0px !important;
+  padding-bottom: 15px !important;
   line-height: 1.1;
-  color: #0d3b69;
   text-transform: uppercase;
   text-align: center;
-  margin-top: 0px;
-  padding-bottom: 15px;
 }
 
 /**/
@@ -1123,6 +1112,11 @@ ul.aligned-list {
   border: 1px solid #ddd;
 }
 
+.search-bar-element.search-field-container.search-location-field #suggestions .list-group-item:first-child, .search-bar-element.search-field-container.search-location-field #suggestions-join-form .list-group-item:first-child, .formly-field-googleAutocomplete #suggestions .list-group-item:first-child, .formly-field-googleAutocomplete #suggestions-join-form .list-group-item:first-child {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
 .search-bar-element.search-field-container.search-location-field #suggestions .list-group-item.active, .search-bar-element.search-field-container.search-location-field #suggestions .list-group-item.active:focus, .search-bar-element.search-field-container.search-location-field #suggestions .list-group-item.active:hover, .search-bar-element.search-field-container.search-location-field #suggestions-join-form .list-group-item.active, .search-bar-element.search-field-container.search-location-field #suggestions-join-form .list-group-item.active:focus, .search-bar-element.search-field-container.search-location-field #suggestions-join-form .list-group-item.active:hover, .formly-field-googleAutocomplete #suggestions .list-group-item.active, .formly-field-googleAutocomplete #suggestions .list-group-item.active:focus, .formly-field-googleAutocomplete #suggestions .list-group-item.active:hover, .formly-field-googleAutocomplete #suggestions-join-form .list-group-item.active, .formly-field-googleAutocomplete #suggestions-join-form .list-group-item.active:focus, .formly-field-googleAutocomplete #suggestions-join-form .list-group-item.active:hover {
   color: #fff;
   background-color: #2d88c1;
@@ -1140,6 +1134,8 @@ ul.aligned-list {
 
 .search-bar-element.search-field-container.search-location-field #suggestions li.autocompletefooter img, .search-bar-element.search-field-container.search-location-field #suggestions-join-form li.autocompletefooter img, .formly-field-googleAutocomplete #suggestions li.autocompletefooter img, .formly-field-googleAutocomplete #suggestions-join-form li.autocompletefooter img {
   width: 120px;
+  margin-right: 20px;
+  margin-top: 5px;
 }
 
 /**/
@@ -1182,7 +1178,7 @@ ul.aligned-list {
   padding-bottom: 50px;
 }
 
-#join-entire-page-content strong, #join-entire-page-content p, #join-entire-page-content li, #jfi-modal-dialog strong, #jfi-modal-dialog p, #jfi-modal-dialog li, .jfi-success-container strong, .jfi-success-container p, .jfi-success-container li {
+#join-entire-page-content strong, #join-entire-page-content p, #join-entire-page-content #cb-legal-content-block #cookiesPolicy p, #cb-legal-content-block #cookiesPolicy #join-entire-page-content p, #join-entire-page-content #cb-legal-content-block #cookiesList p, #cb-legal-content-block #cookiesList #join-entire-page-content p, #join-entire-page-content li, #jfi-modal-dialog strong, #jfi-modal-dialog p, #jfi-modal-dialog #cb-legal-content-block #cookiesPolicy p, #cb-legal-content-block #cookiesPolicy #jfi-modal-dialog p, #jfi-modal-dialog #cb-legal-content-block #cookiesList p, #cb-legal-content-block #cookiesList #jfi-modal-dialog p, #jfi-modal-dialog li, .jfi-success-container strong, .jfi-success-container p, .jfi-success-container #cb-legal-content-block #cookiesPolicy p, #cb-legal-content-block #cookiesPolicy .jfi-success-container p, .jfi-success-container #cb-legal-content-block #cookiesList p, #cb-legal-content-block #cookiesList .jfi-success-container p, .jfi-success-container li {
   color: #222222;
 }
 
@@ -1190,6 +1186,20 @@ ul.aligned-list {
   color: #2d88c1;
   font-size: 16px !important;
   line-height: 1.1 !important;
+}
+
+#join-entire-page-content a#desktop-upload-remove-file-btn, #jfi-modal-dialog a#desktop-upload-remove-file-btn, .jfi-success-container a#desktop-upload-remove-file-btn {
+  background-color: #ffcc00;
+  color: #fff;
+  border: none;
+  border-radius: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#join-entire-page-content a#desktop-upload-remove-file-btn:hover, #join-entire-page-content a#desktop-upload-remove-file-btn:active, #join-entire-page-content a#desktop-upload-remove-file-btn:focus, #jfi-modal-dialog a#desktop-upload-remove-file-btn:hover, #jfi-modal-dialog a#desktop-upload-remove-file-btn:active, #jfi-modal-dialog a#desktop-upload-remove-file-btn:focus, .jfi-success-container a#desktop-upload-remove-file-btn:hover, .jfi-success-container a#desktop-upload-remove-file-btn:active, .jfi-success-container a#desktop-upload-remove-file-btn:focus {
+  background-color: #2d88c1;
+  text-decoration: none;
 }
 
 #join-entire-page-content a:hover, #join-entire-page-content a:active, #join-entire-page-content a:focus, #jfi-modal-dialog a:hover, #jfi-modal-dialog a:active, #jfi-modal-dialog a:focus, .jfi-success-container a:hover, .jfi-success-container a:active, .jfi-success-container a:focus {
@@ -1240,7 +1250,7 @@ ul.aligned-list {
   margin: 0px;
 }
 
-#cb-legal-content-block h2, #cb-legal-content-block p, #cb-legal-content-block li, #cb-legal-content-block b {
+#cb-legal-content-block h2, #cb-legal-content-block p, #cb-legal-content-block #cookiesPolicy p, #cb-legal-content-block #cookiesList p, #cb-legal-content-block li, #cb-legal-content-block b {
   color: #222222;
 }
 
@@ -1250,6 +1260,42 @@ ul.aligned-list {
 
 #cb-legal-content-block a:hover, #cb-legal-content-block a:active, #cb-legal-content-block a:focus {
   color: #2d88c1;
+  text-decoration: underline;
+}
+
+#cb-legal-content-block #cookiesPolicy table, #cb-legal-content-block #cookiesList table {
+  width: 100%;
+}
+
+#cb-legal-content-block #cookiesPolicy table.listCookies tr:first-child, #cb-legal-content-block #cookiesList table.listCookies tr:first-child {
+  background-color: #ccc;
+}
+
+#cb-legal-content-block #cookiesPolicy table td, #cb-legal-content-block #cookiesList table td {
+  padding: 2px;
+  width: auto;
+}
+
+#cb-legal-content-block #cookiesPolicy table td p, #cb-legal-content-block #cookiesList table td p {
+  font-size: 12px;
+}
+
+#cb-legal-content-block #cookiesPolicy h3, #cb-legal-content-block #cookiesList h3 {
+  font-size: 20px !important;
+  font-weight: normal !important;
+}
+
+#cb-legal-content-block #cookiesPolicy p, #cb-legal-content-block #cookiesList p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#cb-legal-content-block #cookiesPolicy a, #cb-legal-content-block #cookiesList a {
+  color: #2d88c1 !important;
+}
+
+#cb-legal-content-block #cookiesPolicy a:hover, #cb-legal-content-block #cookiesPolicy a:active, #cb-legal-content-block #cookiesPolicy a:focus, #cb-legal-content-block #cookiesList a:hover, #cb-legal-content-block #cookiesList a:active, #cb-legal-content-block #cookiesList a:focus {
+  color: #2d88c1 !important;
   text-decoration: underline;
 }
 
@@ -1401,13 +1447,27 @@ ul.aligned-list {
   .internals-section, .legal-page-background {
     padding-bottom: 100px;
   }
-  .internals-titles, .error-card h1, #join-entire-page-content .join-form-header, #jfi-modal-dialog .join-form-header, .jfi-success-container .join-form-header, #cb-legal-content-block h1, #browse-by-container #browse-by-header, #browse-by-container #browse-by-header p, #after-apply-thank-you-header, #edit-preference-view #edit-preference-title, #subscription-title, .search-results-title, .jdp-title-inner-container .jdp-title-block-position .jdp-job-title {
-    font-size: 36px;
+  .internals-titles, .error-card h1, #join-entire-page-content .join-form-header, #jfi-modal-dialog .join-form-header, .jfi-success-container .join-form-header, #cb-legal-content-block h1, #cb-legal-content-block #cookiesPolicy h2, #cb-legal-content-block #cookiesList h2, #cb-legal-content-block #cookiesPolicy h3, #cb-legal-content-block #cookiesList h3, #browse-by-container #browse-by-header, #browse-by-container #browse-by-header p, #after-apply-thank-you-header, #edit-preference-view #edit-preference-title, #subscription-title, .search-results-title, .jdp-title-inner-container .jdp-title-block-position .jdp-job-title {
+    font-size: 36px !important;
   }
   /**/
   /**/
   .search-bar-element.search-field-container.search-location-field #suggestions {
     padding-right: 15px !important;
+  }
+  .search-bar-element.search-field-container.search-location-field #suggestions .list-group-item {
+    text-align: left;
+  }
+  /**/
+  /**/
+  #cb-legal-content-block #cookiesPolicy table td, #cb-legal-content-block #cookiesList table td {
+    padding: 5px;
+  }
+  #cb-legal-content-block #cookiesPolicy table td p, #cb-legal-content-block #cookiesList table td p {
+    font-size: 16px;
+  }
+  #cb-legal-content-block #cookiesPolicy h3, #cb-legal-content-block #cookiesList h3 {
+    font-size: 28px !important;
   }
   /**/
   /**/
@@ -1492,10 +1552,12 @@ ul.aligned-list {
 .mobile-sort-jobs .mobile-dropdown-sort ul li {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  padding: 0px;
 }
 
 .mobile-sort-jobs .mobile-dropdown-sort ul li a {
   color: #222222;
+  padding: 10px;
 }
 
 .mobile-sort-jobs .mobile-dropdown-sort ul li:hover, .mobile-sort-jobs .mobile-dropdown-sort ul li:active, .mobile-sort-jobs .mobile-dropdown-sort ul li:focus {
@@ -1614,18 +1676,18 @@ ul.aligned-list {
 }
 
 #jrp-desktop-facet-col #desktop-facets-container #narrow-search-header {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  color: #0d3b69;
-  text-transform: capitalize;
+  color: #fff;
   background-color: #2d88c1;
+  font-weight: bold;
+  text-transform: capitalize;
   width: 100%;
   margin-bottom: 20px;
-  font-weight: bold;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #jrp-desktop-facet-col #desktop-facets-container #narrow-search-header:hover, #jrp-desktop-facet-col #desktop-facets-container #narrow-search-header:active, #jrp-desktop-facet-col #desktop-facets-container #narrow-search-header:focus {
-  background-color: #297aae;
+  background-color: #2674a4;
 }
 
 #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body {
@@ -1645,17 +1707,25 @@ ul.aligned-list {
 }
 
 #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-category-header {
-  color: #0d3b69;
+  color: #fff;
   background-color: #2d88c1;
-  text-transform: capitalize;
   font-weight: bold;
-  padding: 9px 0px 10px 20px;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 9px 0px 10px 43px;
   margin: 0px;
   width: 100%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-category-header:hover, #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-category-header:active, #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-category-header:focus {
+  background-color: #2674a4;
 }
 
 #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-category-header .facet-arrow {
-  color: #2d88c1;
+  color: #fff;
+  font-size: 18px;
 }
 
 #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-item-container {
@@ -1708,10 +1778,15 @@ ul.aligned-list {
   width: 100%;
   margin: 0px;
   padding: 5px 0px;
+  font-weight: normal;
 }
 
 #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .view-facet-btn-container .view_facet_text {
   color: #222222;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1;
 }
 
 #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .view-facet-btn-container .view_facet_text:hover, #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .view-facet-btn-container .view_facet_text:active, #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .view-facet-btn-container .view_facet_text:focus {
@@ -1719,27 +1794,26 @@ ul.aligned-list {
 }
 
 #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .view-facet-btn-container .view_facet_text.collapsed:before {
-  content: '\f067';
-  font: normal normal normal 14px/1 FontAwesome;
+  content: '+';
 }
 
 #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .view-facet-btn-container .view_facet_text:before {
-  content: '\f068';
-  font: normal normal normal 14px/1 FontAwesome;
+  content: '-';
 }
 
 #job-result-table, #recommendation-table {
   margin-bottom: 0px;
 }
 
-#job-result-table #job-result-table-header-table-row, #recommendation-table #job-result-table-header-table-row {
-  border-bottom: 1px solid transparent;
+#job-result-table #job-result-table-header-table-row, #job-result-table #after-apply-job-table-header, #recommendation-table #job-result-table-header-table-row, #recommendation-table #after-apply-job-table-header {
+  border-bottom: 2px solid #2d88c1;
 }
 
 #job-result-table .job-result-header, #recommendation-table .job-result-header {
   background-color: #fff;
   padding: 8px;
   min-width: 165px;
+  font-size: 16px;
 }
 
 #job-result-table .job-result-header #desktop-job-location-sort, #job-result-table .job-result-header .job-table-header-location, #recommendation-table .job-result-header #desktop-job-location-sort, #recommendation-table .job-result-header .job-table-header-location {
@@ -1810,12 +1884,19 @@ ul.aligned-list {
   text-align: center;
 }
 
+.jrp-pagination-row .mobile-pagination .next-mobile-page:hover, .jrp-pagination-row .mobile-pagination .next-mobile-page:active, .jrp-pagination-row .mobile-pagination .next-mobile-page:focus,
+.jrp-pagination-row .mobile-pagination .previous-mobile-page:hover,
+.jrp-pagination-row .mobile-pagination .previous-mobile-page:active,
+.jrp-pagination-row .mobile-pagination .previous-mobile-page:focus {
+  opacity: 1;
+}
+
 @media (min-width: 992px) {
-  #jrp-desktop-facet-col .caret-facet-category-header, #job-result-table .job-result-header {
+  #jrp-desktop-facet-col .caret-facet-category-header, #job-result-table .job-result-header, #recommendation-table .job-result-header {
     padding-top: 10px;
     padding-bottom: 10px;
   }
-  #jrp-desktop-facet-col .caret-facet-category-header, #jrp-desktop-facet-col .caret-facet-category-header a, #jrp-desktop-facet-col .caret-facet-category-header span, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-title, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-location, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-date-posted, #job-result-table .job-result-header, #job-result-table .job-result-header a, #job-result-table .job-result-header span, #job-result-table .job-result-header .job-table-header-title, #job-result-table .job-result-header .job-table-header-location, #job-result-table .job-result-header .job-table-header-date-posted {
+  #jrp-desktop-facet-col .caret-facet-category-header, #jrp-desktop-facet-col .caret-facet-category-header a, #jrp-desktop-facet-col .caret-facet-category-header span, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-title, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-location, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-date-posted, #job-result-table .job-result-header, #job-result-table .job-result-header a, #job-result-table .job-result-header span, #job-result-table .job-result-header .job-table-header-title, #job-result-table .job-result-header .job-table-header-location, #job-result-table .job-result-header .job-table-header-date-posted, #recommendation-table .job-result-header, #recommendation-table .job-result-header a, #recommendation-table .job-result-header span, #recommendation-table .job-result-header .job-table-header-title, #recommendation-table .job-result-header .job-table-header-location, #recommendation-table .job-result-header .job-table-header-date-posted {
     font-size: 18px;
     line-height: 30px;
   }
@@ -1832,7 +1913,11 @@ ul.aligned-list {
     padding-bottom: 0px;
   }
   #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-category-header {
+    text-align: left;
     padding: 10px 0px 10px 14px;
+  }
+  #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-category-header:hover, #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-category-header:active, #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-category-header:focus {
+    background-color: #2d88c1;
   }
   #jrp-desktop-facet-col #desktop-facets-container #desktop-facets-body .desktop-facets .caret-facet-item-container {
     margin: 0px;
@@ -1846,7 +1931,7 @@ ul.aligned-list {
 }
 
 @media (min-width: 1200px) {
-  #jrp-desktop-facet-col .caret-facet-category-header, #jrp-desktop-facet-col .caret-facet-category-header a, #jrp-desktop-facet-col .caret-facet-category-header span, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-title, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-location, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-date-posted, #job-result-table .job-result-header, #job-result-table .job-result-header a, #job-result-table .job-result-header span, #job-result-table .job-result-header .job-table-header-title, #job-result-table .job-result-header .job-table-header-location, #job-result-table .job-result-header .job-table-header-date-posted {
+  #jrp-desktop-facet-col .caret-facet-category-header, #jrp-desktop-facet-col .caret-facet-category-header a, #jrp-desktop-facet-col .caret-facet-category-header span, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-title, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-location, #jrp-desktop-facet-col .caret-facet-category-header .job-table-header-date-posted, #job-result-table .job-result-header, #job-result-table .job-result-header a, #job-result-table .job-result-header span, #job-result-table .job-result-header .job-table-header-title, #job-result-table .job-result-header .job-table-header-location, #job-result-table .job-result-header .job-table-header-date-posted, #recommendation-table .job-result-header, #recommendation-table .job-result-header a, #recommendation-table .job-result-header span, #recommendation-table .job-result-header .job-table-header-title, #recommendation-table .job-result-header .job-table-header-location, #recommendation-table .job-result-header .job-table-header-date-posted {
     font-size: 20px;
   }
   #job-result-table .job-result-header, #recommendation-table .job-result-header {
@@ -1882,7 +1967,7 @@ ul.aligned-list {
 }
 
 .jdp-title-inner-container .jdp-title-block-position .jdp-job-title {
-  text-align: left;
+  text-align: center;
   padding-bottom: 0px;
 }
 
@@ -1897,6 +1982,7 @@ ul.aligned-list {
 .jdp-title-inner-container .jdp-title-block-position #jdp-title-date-posted {
   color: #222222;
   padding-top: 10px;
+  text-align: center;
 }
 
 .job-details-content {
@@ -1934,11 +2020,11 @@ ul.aligned-list {
 
 .job-details-content .jdp-job-snapshot-card .snapshot-padding {
   padding: 20px;
-  line-height: 30px;
+  line-height: 28px;
 }
 
 .job-details-content .jdp-job-snapshot-card .snapshot-padding li {
-  padding-bottom: 15px;
+  padding-bottom: 5px;
 }
 
 .job-details-content .jdp-job-snapshot-card .snapshot-padding li .snapshot-icon.secondary-text-color {
@@ -1987,7 +2073,7 @@ ul.aligned-list {
   margin-bottom: 0px;
 }
 
-.job-details-content #jdp-job-description-section .jdp-job-description-card, .job-details-content #jdp-job-description-section .jdp-job-description-card p, .job-details-content #jdp-job-description-section .jdp-job-description-card li {
+.job-details-content #jdp-job-description-section .jdp-job-description-card, .job-details-content #jdp-job-description-section .jdp-job-description-card p, .job-details-content #jdp-job-description-section .jdp-job-description-card #cb-legal-content-block #cookiesPolicy p, #cb-legal-content-block #cookiesPolicy .job-details-content #jdp-job-description-section .jdp-job-description-card p, .job-details-content #jdp-job-description-section .jdp-job-description-card #cb-legal-content-block #cookiesList p, #cb-legal-content-block #cookiesList .job-details-content #jdp-job-description-section .jdp-job-description-card p, .job-details-content #jdp-job-description-section .jdp-job-description-card li {
   color: #222222;
 }
 
@@ -2002,12 +2088,10 @@ ul.aligned-list {
 
 .job-details-content #jdp-job-requirements-section {
   background-color: #fff;
-  border-bottom: 3px solid #ccc;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
+  border-bottom: none;
 }
 
-.job-details-content #jdp-job-requirements-section .jdp-job-requirements-card, .job-details-content #jdp-job-requirements-section .jdp-job-requirements-card p, .job-details-content #jdp-job-requirements-section .jdp-job-requirements-card li {
+.job-details-content #jdp-job-requirements-section .jdp-job-requirements-card, .job-details-content #jdp-job-requirements-section .jdp-job-requirements-card p, .job-details-content #jdp-job-requirements-section .jdp-job-requirements-card #cb-legal-content-block #cookiesPolicy p, #cb-legal-content-block #cookiesPolicy .job-details-content #jdp-job-requirements-section .jdp-job-requirements-card p, .job-details-content #jdp-job-requirements-section .jdp-job-requirements-card #cb-legal-content-block #cookiesList p, #cb-legal-content-block #cookiesList .job-details-content #jdp-job-requirements-section .jdp-job-requirements-card p, .job-details-content #jdp-job-requirements-section .jdp-job-requirements-card li {
   color: #222222;
 }
 
@@ -2023,6 +2107,10 @@ ul.aligned-list {
 .job-details-content #jdp-bottom-apply-section {
   margin-top: 10px;
   background-color: #fff;
+  margin-top: 10px;
+  border-top: 3px solid #ccc;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
 }
 
 .job-details-content #jdp-bottom-apply-section .jdp-bottom-apply-card {
@@ -2042,9 +2130,10 @@ ul.aligned-list {
 .job-details-content #jdp-similar-jobs-row h3 {
   font-size: 30px;
   color: #0d3b69;
-  padding-bottom: 10px;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 .job-details-content #jdp-similar-jobs-row .similar-jobs {
@@ -2062,8 +2151,18 @@ ul.aligned-list {
 }
 
 @media (min-width: 768px) {
+  #jdp-not-ready-to-apply-link-top,
+  #jdp-not-ready-to-apply-link-bottom {
+    font-size: 12px;
+  }
   .jdp-title-inner-container {
-    margin-top: 25px;
+    margin-top: 0px;
+  }
+  .jdp-title-inner-container .jdp-title-block-position .jdp-job-title {
+    text-align: left;
+  }
+  .jdp-title-inner-container .jdp-title-block-position #jdp-title-date-posted {
+    text-align: left;
   }
   .jdp-title-inner-container .jdp-top-apply-block-position {
     width: 25%;
@@ -2086,4 +2185,70 @@ ul.aligned-list {
     padding: 0 0.55em;
     content: "|";
   }
+}
+
+@media (min-width: 992px) {
+  #jdp-not-ready-to-apply-link-top,
+  #jdp-not-ready-to-apply-link-bottom {
+    font-size: 16px;
+  }
+}
+
+#cookies-policy-bar-placeholder {
+  display: none;
+}
+
+#cookies-policy-bar-section {
+  position: fixed;
+  z-index: 1035;
+  bottom: 0px;
+  top: auto;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  background: #0d3b69;
+  padding: 0px;
+  height: auto;
+}
+
+#cookies-policy-bar-section #cookies-policy-bar {
+  padding: 10px;
+}
+
+#cookies-policy-bar-section #cookies-policy-bar-dismiss-button {
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#cookies-policy-bar-section #cookies-policy-bar-dismiss-button, #cookies-policy-bar-section #cookies-policy-bar-dismiss-button:hover, #cookies-policy-bar-section #cookies-policy-bar-dismiss-button:active, #cookies-policy-bar-section #cookies-policy-bar-dismiss-button:focus {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+
+#cookies-policy-bar-section #cookies-policy-bar-dismiss-button:hover, #cookies-policy-bar-section #cookies-policy-bar-dismiss-button:active, #cookies-policy-bar-section #cookies-policy-bar-dismiss-button:focus {
+  opacity: 0.7;
+}
+
+#cookies-policy-bar-section .text-center {
+  font-size: 16px;
+  color: #fff;
+}
+
+#cookies-policy-bar-section .text-center #cookies-policy-link {
+  opacity: 1;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#cookies-policy-bar-section .text-center #cookies-policy-link, #cookies-policy-bar-section .text-center #cookies-policy-link:hover, #cookies-policy-bar-section .text-center #cookies-policy-link:active, #cookies-policy-bar-section .text-center #cookies-policy-link:focus {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: underline;
+}
+
+#cookies-policy-bar-section .text-center #cookies-policy-link:hover, #cookies-policy-bar-section .text-center #cookies-policy-link:active, #cookies-policy-bar-section .text-center #cookies-policy-link:focus {
+  opacity: 0.7;
 }
