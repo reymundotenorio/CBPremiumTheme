@@ -55,7 +55,7 @@
 // BREADCRUMB -> JOB RESULTS PAGE CONTENT, JOB DETAILS PAGE CONTENT & BROWSE BY PAGE CONTENT
 .breadcrumb{
   background-color: $body-color;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   border-radius: 0px; // <- Always
   border: none; // <- Always
 
@@ -125,6 +125,8 @@
   color: $secondary-color;
   font-weight: bold;
   text-transform: capitalize; //<- Always
+
+  font-size: 16px;
 
   // *** New designs ***
   // color: $text-color;
@@ -324,12 +326,59 @@
         border-right: none;
         border-bottom: none;
         border-radius: 0px;
-        // padding-bottom: 0px;
-        padding-bottom: 10px;
+
+        // If rounded facets
+        @if $rounded-facet{
+          padding-bottom: 0px;
+
+        } @else{
+          padding-bottom: 10px;
+        }
+        // End If rounded facets
+
+        &:first-child{
+          // If rounded facets
+          @if $rounded-facet{
+            // Facet header
+            .caret-facet-category-header{
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
+            }
+            // End Facet header
+
+          } @else{
+            // Facet header
+            .caret-facet-category-header{
+              border-top-left-radius: 0px;
+              border-top-right-radius: 0px;
+            }
+            // End Facet header
+          }
+          // End If rounded facets
+        }
 
         &:last-child{
           // padding-bottom: 0px;
           padding-bottom: 15px;
+
+          // If rounded facets
+          @if $rounded-facet{
+            // Facet header
+            .caret-facet-category-header{
+              border-bottom-left-radius: 10px;
+              border-bottom-right-radius: 10px;
+            }
+            // End Facet header
+
+          } @else{
+            // Facet header
+            .caret-facet-category-header{
+              border-bottom-left-radius: 0px;
+              border-bottom-right-radius: 0px;
+            }
+            // End Facet header
+          }
+          // End If rounded facets
         }
 
         @if $full-facet {
@@ -484,7 +533,7 @@
           font-family: $primary-font;
           font-size: 16px;
           font-weight: normal;
-          line-height: 1;
+          line-height: 1.3;
 
           @include on-event{
             text-decoration: underline;
@@ -772,7 +821,7 @@
 
     &, a, span, .job-table-header-title, .job-table-header-location, .job-table-header-date-posted{
       font-size: 18px;
-      line-height: 30px;
+      line-height: 1.3;
     }
   }
   // End Facet header & Table header
@@ -787,7 +836,6 @@
 
   // Facets container
   #jrp-desktop-facet-col{
-
     // Facets container
     #desktop-facets-container{
       // Narrow search button
@@ -811,15 +859,49 @@
         .desktop-facets{
           padding-bottom: 25px;
 
-          &:last-child{
-            @if not $full-facet {
-              padding-bottom: 0px;
+          // If rounded facets
+          @if $rounded-facet{
+            // Facet header
+            .caret-facet-category-header{
+              border-top-left-radius: 10px;
+              border-top-right-radius: 10px;
             }
+            // End Facet header
+
+          } @else{
+            // Facet header
+            .caret-facet-category-header{
+              border-top-left-radius: 0px;
+              border-top-right-radius: 0px;
+            }
+            // End Facet header
+          }
+          // End If rounded facets
+
+          &:last-child{
+            // If rounded facets
+            @if $rounded-facet{
+              // Facet header
+              .caret-facet-category-header{
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+
+                border-bottom-left-radius: 0px;
+                border-bottom-right-radius: 0px;
+              }
+              // End Facet header
+            }
+            // End If rounded facets
           }
 
           @if $full-facet {
             border-left: none;
             border-right: none;
+
+          } @else{
+            &:last-child{
+              padding-bottom: 0px;
+            }
           }
 
           // Facet header

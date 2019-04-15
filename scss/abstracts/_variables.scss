@@ -30,7 +30,12 @@ $btn-color: $third-color;
 $hover-color: $secondary-color;
 $facets-color: $secondary-color;
 $facets-title: $primary-color;
+$internals-links: $hover-color;
 $body-color: $white;
+
+/// For rounded facets
+$rounded-facet: false;
+/// End For rounded facets
 
 /// For full facets
 $full-facet: false;

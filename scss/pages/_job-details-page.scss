@@ -16,6 +16,7 @@
 
   max-width: 185px;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 // End Apply buttons
 
@@ -26,6 +27,7 @@
   font-weight: bold;
   text-align: center;
   text-transform: capitalize; // <- Always
+  margin-top: 0px;
 }
 // End Not ready to apply link
 
@@ -59,7 +61,7 @@
       }
 
       .jdp-title-job-in{
-        text-transform: lowercase; // <- Standard
+        // text-transform: lowercase; // <- Standard
 
         // *** External Vendor Design ***
         // display: none;
@@ -73,7 +75,7 @@
       }
 
       .jdp-title-job-at{
-        text-transform: lowercase; // <- Standard
+        // text-transform: lowercase; // <- Standard
 
         // *** External Vendor Design ***
         // &:before{
@@ -124,6 +126,7 @@
     text-transform: capitalize;
 
     padding-bottom: 5px;
+    text-align: center;
 
     // *** External Vendor Design ***
     // font-size: 24px;
@@ -185,7 +188,7 @@
     // Snapshot list
     .snapshot-padding{
       padding: 20px;
-      line-height: 28px;
+      line-height: 1.3;
 
       // *** External Vendor Design ***
       // background-color: $grey;
@@ -196,7 +199,7 @@
 
       // List item
       li{
-        padding-bottom: 5px;
+        padding-bottom: 0px;
 
         // *** External Vendor Design ***
         // padding-bottom: 10px;
@@ -206,16 +209,16 @@
         .snapshot-icon.secondary-text-color{
           color: $secondary-color;
           font-size: 24px;
-          padding-top: 9px;
+          padding-top: 5px;
           padding-right: 10px;
           // display: table-cell;
 
           &.glyphicon-triangle-top{
-            padding-top: 3px;
+            padding-top: 0px;
           }
 
           &.fa-clock-o, &.fa-info-circle{
-            padding-top: 8px;
+            padding-top: 5px;
           }
 
           // *** External Vendor Design ***
@@ -427,6 +430,7 @@
     // Check out our similar jobs title
     h3{
       font-size: 30px; // <- Always
+      font-weight: bold;
       color: $primary-color;
       text-align: center;
       text-transform: uppercase; // <- Always
@@ -475,7 +479,16 @@
 
 
 @media (min-width: 768px){
-  
+
+  // JOB DETAILS CONTENT
+  .job-details-content{
+    // Job description, job requirements, job snapshot & about us title
+    .content-card-header{
+      text-align: left;
+    }
+    // End Job description, job requirements, job snapshot & about us title
+  }
+
   // Not ready to apply link
   #jdp-not-ready-to-apply-link-top,
   #jdp-not-ready-to-apply-link-bottom{
