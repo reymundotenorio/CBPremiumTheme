@@ -117,6 +117,10 @@
   background-color: $body-color;
   padding-top: 0px;
 
+  border-top: 3px solid $grey-divider;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+
   // Job description, job requirements, job snapshot & about us title
   .content-card-header{
     color: $primary-color;
@@ -478,16 +482,7 @@
 // END JOB DETAILS CONTENT
 
 
-@media (min-width: 768px){
-
-  // JOB DETAILS CONTENT
-  .job-details-content{
-    // Job description, job requirements, job snapshot & about us title
-    .content-card-header{
-      text-align: left;
-    }
-    // End Job description, job requirements, job snapshot & about us title
-  }
+@media (min-width: 768px) {
 
   // Not ready to apply link
   #jdp-not-ready-to-apply-link-top,
@@ -528,6 +523,11 @@
 
   // JOB DETAILS CONTENT
   .job-details-content{
+    // Job description, job requirements, job snapshot & about us title
+    .content-card-header{
+      text-align: left;
+    }
+    // End Job description, job requirements, job snapshot & about us title
 
     // Company logo & apply bottom section
     #jdp-bottom-apply-section{
@@ -635,5 +635,12 @@
     // End Apply button and not ready to apply text container
   }
   // END JOB TITLE, DATE POSTED AND APPLY TOP BUTTON CONTAINER
+
+  // JOB DETAILS CONTENT
+  .job-details-content{
+    border: none;
+  }
+  // END JOB DETAILS CONTENT
+
 
 }

@@ -149,6 +149,23 @@
 		border: none;
 		background-color: $primary-color;
 
+		// Navigation with transition
+		height: auto !important;
+		-webkit-transition: left 0.4s ease;
+		transition: left 0.4s ease;
+		position: absolute;
+		left: 100vh;
+		right: auto;
+		width: calc(100% + 15px);
+		z-index: 3;
+		-webkit-box-shadow: -8px 8px 15px -5px rgba($black, 0.15);
+		box-shadow: -8px 8px 15px -5px rgba($black, 0.15);
+
+		&.in{
+			left: 0px;
+		}
+		// End Navigation with transition
+
 		// *** External Vendor Design ***
 		// width: 230px;
 		// position: absolute;
@@ -218,7 +235,7 @@
 					content: "\f107";
 				}
 			}
-			// Dropdown icon ▼
+			// End Dropdown icon ▼
 
 			// Dropdown menu open
 			&.open{
@@ -309,7 +326,7 @@
 }
 // End earch mobile button
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
 
 	// Top social
 	.top-social{
@@ -391,6 +408,19 @@
 			padding-left: 0px;
 			padding-right: 0px;
 			padding-top: 0px;
+
+			// Navigation with transition
+			transition: none;
+			position: static;
+			left: auto;
+			width: auto;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+
+			&.in{
+				left: auto;
+			}
+			// End Navigation with transition
 
 			// *** External Vendor Design ***
 			// width: auto;
@@ -537,7 +567,7 @@
 
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px) {
 
 	// Navbar default
 	.navbar-default{
@@ -576,7 +606,7 @@
 
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
 
 	// Navbar default
 	.navbar-default{

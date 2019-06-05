@@ -150,7 +150,7 @@
     @extend .internals-titles;
 
     margin-top: 20px;
-    padding-bottom: 0px;
+    padding-bottom: 0px !important;
   }
   // End Main title
 
@@ -678,7 +678,7 @@
 // END UNSUBSCRIBE PAGE CONTENT
 // ****************************
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
 
   // Internals section & legal page container
   .internals-section, .legal-page-background{
@@ -880,7 +880,7 @@
   // GOOGLE LOCATIONS SUGGESTIONS DROPDOWN
   // *************************************
 
-  @if $label-inline {
+  @if $label-inline{
     // Location search bar element
     .search-bar-element.search-field-container.search-location-field{
       // Google locations suggestions dropdown

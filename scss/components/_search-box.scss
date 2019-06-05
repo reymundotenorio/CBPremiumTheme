@@ -38,7 +38,7 @@
         text-align: center;
 
         // Remove X icon from IE
-        &::-ms-clear {
+        &::-ms-clear{
           display: none;
         }
         // End Remove X icon from IE
@@ -132,7 +132,7 @@
 // End Extend Search
 //
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
 
   /// This is a fix for element not using its full space
   .search-mobile{
@@ -389,9 +389,9 @@
 
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
 
-  @if $label-inline {
+  @if $label-inline{
     // Search desktop home
     .search-desktop-home, #search-widget{
       // Search bar

@@ -315,7 +315,7 @@
       background-color: $body-color;
 
       // *** Full background all facets ***
-      @if $full-facet {
+      @if $full-facet{
         background-color: $facets-color;
       }
       // *** End Full background all facets ***
@@ -332,7 +332,8 @@
           padding-bottom: 0px;
 
         } @else{
-          padding-bottom: 10px;
+          // padding-bottom: 10px;
+          padding-bottom: 0px;
         }
         // End If rounded facets
 
@@ -341,8 +342,8 @@
           @if $rounded-facet{
             // Facet header
             .caret-facet-category-header{
-              border-top-left-radius: 10px;
-              border-top-right-radius: 10px;
+              border-top-left-radius: 5px;
+              border-top-right-radius: 5px;
             }
             // End Facet header
 
@@ -365,8 +366,8 @@
           @if $rounded-facet{
             // Facet header
             .caret-facet-category-header{
-              border-bottom-left-radius: 10px;
-              border-bottom-right-radius: 10px;
+              border-bottom-left-radius: 5px;
+              border-bottom-right-radius: 5px;
             }
             // End Facet header
 
@@ -381,7 +382,7 @@
           // End If rounded facets
         }
 
-        @if $full-facet {
+        @if $full-facet{
           border-left: 15px solid $facets-color;
           border-right: 15px solid $facets-color;
         }
@@ -408,8 +409,8 @@
 
           // *** External Vendor Design ***
           // color: #231f20;
-          // border-top-left-radius: 10px;
-          // border-top-right-radius: 10px;
+          // border-top-left-radius: 5px;
+          // border-top-right-radius: 5px;
           // *** End External Vendor Design ***
 
           // *** Facet header border radius ***
@@ -470,7 +471,7 @@
 
           // Facets individual item hover, focus, active
           @include on-event{
-            background-color: tint($facets-color, 30%);
+            background-color: tint($facets-color, 85%);
             color: $text-color;
 
             .caret-facet-accent{
@@ -507,7 +508,7 @@
         font-weight: normal;
 
         // *** Full background all facets ***
-        // @if $full-facet {
+        // @if $full-facet{
         //   background-color: $facets-color;
         //   border: none;
         //   padding-top: 10px;
@@ -523,8 +524,8 @@
         // padding: 0px;
         // font-size: 14px;
         // font-weight: normal;
-        // border-bottom-left-radius: 10px;
-        // border-bottom-right-radius: 10px;
+        // border-bottom-left-radius: 5px;
+        // border-bottom-right-radius: 5px;
         // *** End External Vendor Design ***
 
         // + View more button
@@ -551,7 +552,7 @@
               // font-size: 14px;
 
               // *** Full background all facets ***
-              @if $full-facet {
+              @if $full-facet{
                 display: none;
               }
               // *** End Full background all facets ***
@@ -570,7 +571,7 @@
             // font-size: 14px;
 
             // *** Full background all facets ***
-            @if $full-facet {
+            @if $full-facet{
               display: none;
             }
             // *** End Full background all facets ***
@@ -610,7 +611,7 @@
     font-size: 16px;
 
     // *** Full background all facets ***
-    @if $full-facet {
+    @if $full-facet{
       background-color: $facets-color;
     }
     // *** End Full background all facets ***
@@ -708,10 +709,10 @@
 
     // Job result row hover, focus, active
     @include on-event{
-      background-color: tint($facets-color, 30%);
+      background-color: tint($facets-color, 85%);
 
       // *** Full background all facets ***
-      @if $full-facet {
+      @if $full-facet{
         // background-color: $facets-color;
         background-color: tint($facets-color, 30%);
       }
@@ -723,7 +724,7 @@
           // color: $white;
 
           // *** Full background all facets ***
-          @if $full-facet {
+          @if $full-facet{
             color: $facets-title;
           }
           // *** End Full background all facets ***
@@ -737,7 +738,7 @@
           }
 
           // *** Full background all facets ***
-          @if $full-facet {
+          @if $full-facet{
             &, .address-line{
               color: $text-color;
             }
@@ -753,7 +754,7 @@
               // color: $white;
 
               // *** Full background all facets ***
-              @if $full-facet {
+              @if $full-facet{
                 color: $white;
               }
               // *** End Full background all facets ***
@@ -812,7 +813,7 @@
 // END BACK & NEXT PAGE MOBILE BUTTONS
 
 
-@media (min-width: 992px){
+@media (min-width: 992px) {
 
   // Facet header & Table header
   #jrp-desktop-facet-col .caret-facet-category-header, #job-result-table .job-result-header, #recommendation-table .job-result-header{
@@ -849,11 +850,20 @@
         margin-top: 0px;
 
         // Full background all facets
-        @if $full-facet {
+        @if $full-facet{
           border-left: 15px solid $facets-color;
           border-right: 15px solid $facets-color;
         }
         // End Full background all facets
+
+        // If rounded facets
+        @if $rounded-facet{
+          .view-facet-btn-container{
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+          }
+        }
+        // End If rounded facets
 
         // Facets items
         .desktop-facets{
@@ -863,8 +873,8 @@
           @if $rounded-facet{
             // Facet header
             .caret-facet-category-header{
-              border-top-left-radius: 10px;
-              border-top-right-radius: 10px;
+              border-top-left-radius: 5px;
+              border-top-right-radius: 5px;
             }
             // End Facet header
 
@@ -883,8 +893,8 @@
             @if $rounded-facet{
               // Facet header
               .caret-facet-category-header{
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
 
                 border-bottom-left-radius: 0px;
                 border-bottom-right-radius: 0px;
@@ -894,7 +904,7 @@
             // End If rounded facets
           }
 
-          @if $full-facet {
+          @if $full-facet{
             border-left: none;
             border-right: none;
 
@@ -918,7 +928,7 @@
             // End Align header title with child items ***
 
             // *** Full background all facets ***
-            @if $full-facet {
+            @if $full-facet{
               padding-left: 0px;
             }
             // *** End Full background all facets ***
@@ -966,7 +976,7 @@
 }
 
 
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
 
   // Facet header & Table header
   #jrp-desktop-facet-col .caret-facet-category-header, #job-result-table .job-result-header, #recommendation-table .job-result-header{
