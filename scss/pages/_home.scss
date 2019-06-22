@@ -2,15 +2,15 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 
-.landing-banner{
-  background: url("../img/banner-mobile.png") no-repeat center center;
+.home-banner{
+  background: url("^media_src_home-banner-mobile.png^") $white no-repeat center center;
   background-size: cover;
   height: 450px; // -> Always
   position: relative;
 }
 
 // .content-banner{
-//   background: url("../img/content-banner-mobile.png") no-repeat center center;
+//   background: url("^media_src_content-banner-mobile.png^") $white no-repeat center center;
 //   background-size: cover;
 //   height: 240px;
 //   position: relative;
@@ -18,24 +18,23 @@
 
 @media (min-width: 768px) {
 
-  .landing-banner{
-    background: none;
-    height: auto;
-
-    #landing-carousel{
-      .item{
-        background: url("../img/banner.png") no-repeat center center;
-        background-size: cover;
-        height: 620px;
-      }
-    }
+  .home-banner{
+    background-image: url("^media_src_home-banner.png^");
+    background-size: cover;
+    height: 600px;
   }
 
   // .content-banner{
-  //   background: url("../img/content-banner.png") no-repeat center center;
-  //   background-size: cover;
-  //   height: 320px;
-  //   position: relative;
+  //   background: none;
+  //   height: auto;
+  //
+  //   #content-carousel{
+  //     .item{
+  //       background: url("^media_src_banner.png^") $white no-repeat center center;
+  //       background-size: cover;
+  //       height: 620px;
+  //     }
+  //   }
   // }
 
 }

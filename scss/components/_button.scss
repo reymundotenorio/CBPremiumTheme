@@ -1,17 +1,21 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the button component.
-// -----------------------------------------------------------------------------
+/// -----------------------------------------------------------------------------
+/// This file contains all styles related to the button component.
+/// -----------------------------------------------------------------------------
 
 @mixin btn-style{
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
   background-color: $btn-color;
-  padding: 5px 15px;
   color: $white;
-  text-decoration: none;
-  text-align: center;
+  padding: 8.5px 15px;
   border: none;
   border-radius: 0px;
+
+  font-size: $buttons-font-size;
+  line-height: 1.3;
+  text-decoration: none;
+  text-align: center;
+  outline: none;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 
   white-space: pre-wrap;
   white-space: -moz-pre-wrap;
@@ -19,20 +23,14 @@
   white-space: -o-pre-wrap;
   word-wrap: break-word;
 
-  line-height: 1.3;
-  outline: none;
-
-  font-size: 16px;
-
   @include on-event{
-    background-color: $hover-color;
-    text-decoration: none;
     color: $white;
-    border: none;
+    background-color: shade($btn-color, 15%);
+    text-decoration: none;
   }
 }
 
-// Join Our Talent Network button
+/// Join Our Talent Network button
 .btn-join{
   @include btn-style;
 
@@ -48,9 +46,8 @@
     }
   }
 }
-// End Join Our Talent Network button
 
-// Override buttons behavior
+/// Override buttons behavior
 .primary-button, .btn-default, .btn-general{
   @include btn-style;
 
@@ -60,11 +57,11 @@
     }
   }
 }
-// End Override btn default behavior
 
 @media (min-width: 768px) {
-  // Join our talent network button
+
+  /// Join our talent network button
   .btn-join{
   }
-  // End Join our talent network button
+
 }

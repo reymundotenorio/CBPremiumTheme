@@ -1,6 +1,6 @@
-// -----------------------------------------------------------------------------
-// This file contains all application-wide Sass functions.
-// -----------------------------------------------------------------------------
+/// -----------------------------------------------------------------------------
+/// This file contains all application-wide Sass functions.
+/// -----------------------------------------------------------------------------
 
 /// Native `url(..)` function wrapper
 /// @param{String} $base - base URL for the asset
@@ -34,11 +34,17 @@
   @return mix(white, $color, $percentage);
 }
 
+/// Shamelessly borrowed from Bourbon
 @function shade($color, $percentage){
   @return mix(black, $color, $percentage);
 }
 
-// PhotoShop Letter-spacing
+/// Photoshop Letter-spacing
 @function letter-spacing ($va-value, $font-size){
   @return ($va-value * $font-size) / 1000;
+}
+
+/// Line-height from pixels to points
+@function line-height ($line-height, $font-size){
+  @return $line-height / $font-size;
 }

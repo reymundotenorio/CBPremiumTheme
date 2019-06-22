@@ -1,15 +1,13 @@
-/*** Styles related to social media icons
-* Specific styles for social items on header or footer please
-* use header o footer file
-***/
+//// -----------------------------------------------------------------------------
+/// This file contains all styles related with social media icons
+/// -----------------------------------------------------------------------------
 
-// Social icons container
+/// Social icons container
 .social-icons{
-  display: inline-block;
+  // display: inline-block;
 }
-// End Social icons container
 
-///this class could be added to ul tag containing social items
+/// Social icons container
 .social-items{
   margin: 0px;
   padding: 0px;
@@ -33,7 +31,6 @@
     padding-left: 5px;
     padding-right: 5px;
 
-
     &:first-child{
       padding-left: 0px;
     }
@@ -44,13 +41,17 @@
   }
 }
 
-/// This class could be added to i tags
-/// This skeleton generates social icon with cirle border
+/// Social icons links
 .custom-social{
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  font-size: 24px;
   color: $white;
   background-color: $primary-color;
+
+  height: 35px;
+  width: 35px;
+  border-radius: 100%;
+  border: 1px solid $third-color;
+
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -65,15 +66,14 @@
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: 32px;
-  width: 32px;
-  border-radius: 100%;
-  border: 1px solid $third-color;
+
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 
   @include on-event{
-    text-decoration: none;
     color: $white;
     background-color: $hover-color;
+    text-decoration: none;
   }
 }
 

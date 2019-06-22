@@ -1,70 +1,70 @@
-// -----------------------------------------------------------------------------
-// This file contains styles that are specific to the internals pages.
-// -----------------------------------------------------------------------------
+/// -----------------------------------------------------------------------------
+/// This file contains styles that are specific to the internals pages.
+/// -----------------------------------------------------------------------------
 
 /**/
 /**/
 
-// ************************
-// INTERNALS GENERAL STYLES
-// ************************
+/// ************************
+/// INTERNALS GENERAL STYLES
+/// ************************
 
-// Internals section & legal page container
+/// Internals section & legal page container
 .internals-section, .legal-page-background{
   position: relative;
   background-color: $body-color;
   padding: 30px 0px;
   padding-bottom: 50px;
 }
-// End Internals section & legal page container
+/// End Internals section & legal page container
 
-// Internals general buttons
+/// Internals general buttons
 .internals-buttons{
   @include btn-style;
 
-  font-size: 16px;
-  text-transform: uppercase;
+  // font-size: 18px;
+  // font-weight: bold;
+  // text-transform: uppercase;
+
   margin: 0 auto;
   margin-top: 20px;
-  max-width: 250px;
   display: block;
+  max-width: 250px;
   white-space: normal;
-  line-height: 1.3;
-  // font-weight: bold;
 
   @include on-event{
   }
 }
-// End Internals general button
+/// End Internals general button
 
-// Internals general titles
+/// Internals general titles
 .internals-titles{
+  text-transform: uppercase;
+
+  color: $internals-titles !important;
   font-size: 24px !important;
-  color: $primary-color !important;
   margin-top: 0px !important;
   padding-bottom: 15px !important;
-  line-height: 1.3;
-  text-transform: uppercase;
   text-align: center;
 }
-// End Internals general titles
+/// End Internals general titles
 
-// ****************************
-// END INTERNALS GENERAL STYLES
-// ****************************
+/// ****************************
+/// END INTERNALS GENERAL STYLES
+/// ****************************
 
 /**/
 /**/
 
-// *************************************
-// GOOGLE LOCATIONS SUGGESTIONS DROPDOWN
-// *************************************
+/// *************************************
+/// GOOGLE LOCATIONS SUGGESTIONS DROPDOWN
+/// *************************************
 
-// Location search bar element
+/// Location search bar element
 .search-bar-element.search-field-container.search-location-field, .formly-field-googleAutocomplete{
   position: relative;
 
-  // Google locations suggestions dropdown
+  /// Google locations suggestions dropdown
   #suggestions, #suggestions-join-form{
     position: absolute;
     left: 0px !important;
@@ -73,12 +73,11 @@
     z-index: 100 !important;
     list-style: none !important;
 
-    // dropdown item
+    /// Dropdown items
     .list-group-item{
       color: $text-color;
       background-color: $white;
       border: 1px solid #ddd;
-
       text-align: center;
 
       &:first-child{
@@ -94,132 +93,132 @@
         border: 1px solid $hover-color;
       }
     }
-    // End dropdown item
+    /// End Dropdown items
 
-    // Powered by google container
+    /// Powered by Google container
     li.autocompletefooter{
       height: 25px;
       background-color: $white;
       border: 1px solid #ddd;
       border-top: none;
 
-      border-bottom-left-radius: 4px;
-      border-bottom-right-radius: 4px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
 
       img{
         width: 120px;
-
-        margin-right: 20px;
+        margin: 0px;
         margin-top: 5px;
+        margin-right: 20px;
       }
     }
-    // End Powered by google container
+    /// End Powered by Google container
   }
-  // End Google locations suggestions dropdown
+  /// End Google locations suggestions dropdown
 }
-// End Location search bar element
+/// End Location search bar element
 
-// *****************************************
-// END GOOGLE LOCATIONS SUGGESTIONS DROPDOWN
-// *****************************************
+/// *****************************************
+/// END GOOGLE LOCATIONS SUGGESTIONS DROPDOWN
+/// *****************************************
 
 /**/
 /**/
 
-// ************************
-// 404 AND 500 PAGE CONTENT
-// ************************
+/// ************************
+/// 404 & 500 PAGE CONTENT
+/// ************************
 
 .error-card{
   background-color: $wrongurl-color;
-  text-align: center;
-  margin: 30px 0px;
   padding: 30px;
-  -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
-  box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  margin: 30px 0px;
+  text-align: center;
+  -webkit-box-shadow: 0 8px 17px 0 rgba($black, 0.2),0 6px 20px 0 rgba($black, 0.19);
+  box-shadow: 0 8px 17px 0 rgba($black, 0.2),0 6px 20px 0 rgba($black, 0.19);
 
-  // Warning icon
+  /// Warning icon
   i{
     font-size: 60px;
     color: $secondary-color;
   }
-  // End Warning icon
+  /// End Warning icon
 
-  // Main title
+  /// Main title
   h1{
     @extend .internals-titles;
 
     margin-top: 20px;
     padding-bottom: 0px !important;
   }
-  // End Main title
+  /// End Main title
 
-  // Title and subtitle
+  /// Title and subtitle
   h1, h2{
     color: $primary-color;
   }
-  // End Title and subtitle
+  /// End Title and subtitle
 }
 
-// ****************************
-// END 404 AND 500 PAGE CONTENT
-// ****************************
+/// ****************************
+/// END 404 & 500 PAGE CONTENT
+/// ****************************
 
 /**/
 /**/
 
-// **********************
-// JOIN FORM PAGE CONTENT
-// **********************
+/// **********************
+/// JOIN FORM PAGE CONTENT
+/// **********************
 
-// Join form page conteiner and Join modal
+/// Join form page conteiner and Join modal
 #join-entire-page-content, #jfi-modal-dialog, .jfi-success-container{
-  // Fixing join form bug
+  /// Fixing join form bug
   .row{
     margin-left: 0px;
     margin-right: 0px;
   }
-  // End Fixing join form bug
+  /// End Fixing join form bug
 
-  // Join form dropdown
+  /// Join form dropdown
   .formly-field-select .form-group select{
     height: 34px;
   }
-  // End Join form dropdown
+  /// End Join form dropdown
 
   #join-page-content-section{
     padding-bottom: 50px;
   }
 
-  // Join form title
+  /// Join form title
   .join-form-header{
     @extend .internals-titles;
   }
-  // End Join form title
+  /// End Join form title
 
-  // Join content
+  /// Join content
   strong, p, li{
     color: $text-color;
 
-    // Welcome/Already Join message - Username
+    /// Welcome / Already Join message - Username
     &.username-join-message{
       // text-transform: uppercase;
     }
   }
-  // End Join content
+  /// End Join content
 
-  // Join links
+  /// Join links
   a{
     color: $internals-links;
-    font-size: 16px !important;
-    line-height: 1.3 !important;
+    font-size: $body-font-size !important;
 
-    // Remove upload file X btn
+    /// Remove upload file X btn
     &#desktop-upload-remove-file-btn{
-      background-color: $btn-color;
       color: $white;
+      background-color: $btn-color;
       border: none;
       border-radius:  0px;
+
       -webkit-transition: all 0.3s ease;
       transition: all 0.3s ease;
 
@@ -234,45 +233,46 @@
       text-decoration: underline;
     }
   }
-  // End Join links
+  /// End Join links
 
-  // By joining our Talent Network you have not officially applied to a position text
+  /// By joining our Talent Network you have not officially applied to a position text
   .join-is-not-apply-mobile, .join-is-not-apply{
+    font-size: $body-font-size;
     margin-top: 15px;
-    font-size: 16px;
     padding: 0px;
   }
 
   .join-is-not-apply{
-    margin-top: 0px;
     display: inline-block;
     padding-right: 15px;
+    margin-top: 0px;
   }
-  // End By joining our Talent Network you have not officially applied to a position text
+  /// End By joining our Talent Network you have not officially applied to a position text
 
-  // Join button
+  /// Join button
   #join-button-mobile, #join-button, #jfi-apply{
     @extend .internals-buttons;
+
     margin-top: 0px;
     white-space: nowrap;
   }
-  // End Join button
+  /// End Join button
 
-  // Join and animation container
+  /// Join and animation container
   .join-button-container, #join-apply-block-mobile .text-right{
-
-    // Spinner animation
+    /// Spinner animation
     span.btn.primary-button.text-weight-bold{
-
       @include on-event (true){
         background: transparent;
         display: block;
-        white-space: normal;
         border: none;
         outline: none;
+        margin-top: 15px;
+        white-space: normal;
+
         -webkit-box-shadow: none;
         box-shadow: none;
-        margin-top: 15px;
+
         pointer-events: none;
         cursor: default;
       }
@@ -282,42 +282,42 @@
         margin: 0 auto;
       }
     }
-    // End Spinner animation
+    /// End Spinner animation
   }
-  // End Join and animation container
+  /// End Join and animation container
 }
-// End Join form page conteiner and Join modal
+/// End Join form page conteiner and Join modal
 
-// **************************
-// END JOIN FORM PAGE CONTENT
-// **************************
+/// **************************
+/// END JOIN FORM PAGE CONTENT
+/// **************************
 
 /**/
 /**/
 
-// ********************************************************************
-// PRIVACY POLICY, TERMS AND CONDITIONS AND COOKIE POLICY PAGES CONTENT
-// ********************************************************************
+/// ********************************************************************
+/// PRIVACY POLICY, TERMS AND CONDITIONS AND COOKIE POLICY PAGES CONTENT
+/// ********************************************************************
 
-// Privacy policy & terms and conditions container
+/// Privacy policy & terms and conditions container
 #cb-legal-content-block{
   color: $text-color;
   padding: 0px;
   margin: 0px;
 
-  // Privacy policy & terms and conditions title
+  /// Privacy policy & terms and conditions title
   h1{
     @extend .internals-titles;
   }
-  // End Privacy policy & terms and conditions title
+  /// End Privacy policy & terms and conditions title
 
-  // Privacy policy & terms and conditions content
+  /// Privacy policy & terms and conditions content
   h2, p, li, b{
     color: $text-color;
   }
-  // End Privacy policy & terms and conditions content
+  /// End Privacy policy & terms and conditions content
 
-  // Privacy policy & terms and condition links
+  /// Privacy policy & terms and condition links
   a{
     color: $internals-links;
 
@@ -326,18 +326,18 @@
       text-decoration: underline;
     }
   }
-  // End Privacy policy & terms and condition links
+  /// End Privacy policy & terms and condition links
 
-  // Cookie Policy
+  /// Cookie Policy
   #cookiesPolicy, #cookiesList{
-    // Cookie Policy table
+    /// Cookie Policy table
     table{
       width: 100%;
 
       &.listCookies{
         tr{
           &:first-child{
-            background-color: $grey-divider;
+            background-color: $grey;
           }
         }
       }
@@ -352,26 +352,27 @@
       }
     }
 
-    // Cookie Policy title
+    /// Cookie Policy title
     h2{
       @extend .internals-titles;
     }
 
-    // Cookie Policy sub-title
+    /// Cookie Policy sub-title
     h3{
       @extend .internals-titles;
+
       font-size: 20px !important;
       font-weight: normal !important;
     }
 
-    // Cookie Policy content
+    /// Cookie Policy content
     p{
       @extend p;
-      font-size: 16px;
-      line-height: 1.3;
+
+      font-size: $body-font-size;
     }
 
-    // Cookie Policy links
+    /// Cookie Policy links
     a{
       color: $internals-links !important;
 
@@ -381,66 +382,67 @@
       }
     }
   }
-  // End Cookie Policy
+  /// End Cookie Policy
 }
-// End Privacy policy & terms and conditions container
+/// End Privacy policy & terms and conditions container
 
-// ************************************************************************
-// END PRIVACY POLICY, TERMS AND CONDITIONS AND COOKIE POLICY PAGES CONTENT
-// ************************************************************************
+/// ************************************************************************
+/// END PRIVACY POLICY, TERMS AND CONDITIONS AND COOKIE POLICY PAGES CONTENT
+/// ************************************************************************
 
 /**/
 /**/
 
-// **********************
-// BROWSE BY PAGE CONTENT
-// **********************
+/// **********************
+/// BROWSE BY PAGE CONTENT
+/// **********************
 
-// Browse by container
+/// Browse by container
 #browse-by-container{
-  // Fixing browse by bug
+  /// Fixing browse by bug
   .col-xs-12{
     padding-left: 0px;
     padding-right: 0px;
   }
-  // End Fixing browse by bug
+  /// End Fixing browse by bug
 
-  // Browse by title
+  /// Browse by title
   #browse-by-header{
     @extend .internals-titles;
+
     padding-bottom: 20px;
 
     p{
       @extend .internals-titles;
-      line-height: 1.3;
+
       margin-bottom: 0px;
       padding-bottom: 0px;
     }
   }
-  // End Browse by title
+  /// End Browse by title
 
-  // Country selected
+  /// Country selected
   .browse-by-country-tab{
     color: $hover-color;
-    font-weight: bold;
     background-color: $body-color;
+    font-weight: bold;
     padding-left: 0px;
     padding-right: 0px;
 
     @include on-event{
       color: $hover-color;
-      font-weight: bold;
       background-color: $body-color;
+      font-weight: bold;
       padding-left: 0px;
       padding-right: 0px;
       text-decoration: underline;
     }
   }
-  // Country selected
+  /// Country selected
 
-  // Browse by list
+  /// Browse by list
   .browse-by-element-list{
-    // List item
+    /// List item
     .browse-by-element{
       a{
         color: $internals-links;
@@ -451,67 +453,67 @@
         }
       }
     }
-    // End List item
+    /// End List item
   }
-  // End Browse by list
+  /// End Browse by list
 }
-// End Browse by container
+/// End Browse by container
 
-// **************************
-// END BROWSE BY PAGE CONTENT
-// **************************
+/// **************************
+/// END BROWSE BY PAGE CONTENT
+/// **************************
 
 /**/
 /**/
 
-// ************************
-// AFTER APPLY PAGE CONTENT
-// ************************
+/// ************************
+/// AFTER APPLY PAGE CONTENT
+/// ************************
 
-// After apply page title
+/// After apply page title
 #after-apply-thank-you-header{
   @extend .internals-titles;
 }
-// End After apply page title
+/// End After apply page title
 
-// After apply job content
+/// After apply job content
 #job-results{
-  // After apply title and subtitles
+  /// After apply title and subtitles
   #after-apply-recommended-header, #after-apply-recommended-subheader{
     color: $text-color;
     text-align: center;
   }
-  // End After apply title and subtitles
+  /// End After apply title and subtitles
 
-  // After apply recommendation table
+  /// After apply recommendation table
   #recommendation-table{
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  // End After apply recommendation table
+  /// End After apply recommendation table
 
-  // After apply Search button
+  /// After apply Search button
   .primary-button.search-jobs-button-404{
     @extend .internals-buttons;
   }
-  // End After apply Search button
+  /// End After apply Search button
 }
-// End After apply job content
+/// End After apply job content
 
-// ****************************
-// END AFTER APPLY PAGE CONTENT
-// ****************************
+/// ****************************
+/// END AFTER APPLY PAGE CONTENT
+/// ****************************
 
 /**/
 /**/
 
-// *****************************
-// EDIT PREFERENCES PAGE CONTENT
-// *****************************
+/// *****************************
+/// EDIT PREFERENCES PAGE CONTENT
+/// *****************************
 
-// Edit preferences container
+/// Edit preferences container
 #edit-preference-view{
-  // Fixing Edit preferences bug
+  /// Fixing Edit preferences bug
   .editPrefPageContainer{
     width: 100%;
 
@@ -525,15 +527,15 @@
     padding-left: 0px;
     padding-right: 0px;
   }
-  // End Fixing Edit preferences bug
+  /// End Fixing Edit preferences bug
 
-  // Edit preferences title
+  /// Edit preferences title
   #edit-preference-title{
     @extend .internals-titles;
   }
-  // End Edit preferences title
+  /// End Edit preferences title
 
-  // Edit preferences subtitle
+  /// Edit preferences subtitle
   #edit-preference-instructions{
     h3{
       color: $text-color;
@@ -541,78 +543,80 @@
       text-transform: none;
     }
   }
-  // End Edit preferences subtitle
+  /// End Edit preferences subtitle
 
-  // Edit preferences form section
+  /// Edit preferences form section
   #edit-preference-form{
-    // Alerts
+    /// Alerts
     .alert{
       text-align: center;
     }
-    // End Alerts
+    /// End Alerts
 
-    // Labels
+    /// Labels
     p{
       color: $text-color;
-      font-size: 16px;
+      font-size: $body-font-size;
       font-weight: bold;
       text-transform: none;
     }
-    // End Labels
+    /// End Labels
 
-    // Textfields
+    /// Textfields
     input{
-      font-size: 16px;
+      font-size: $body-font-size;
     }
-    // End Textfields
+    /// End Textfields
 
-    // Edit preferences update button
+    /// Edit preferences update button
     #edit-preference-update-btn{
       @extend .internals-buttons;
+
       margin-top: 5px;
       margin-bottom: 15px;
       height: auto;
     }
-    // End Edit preferences update button
+    /// End Edit preferences update button
 
-    // Unsubscribe link
+    /// Unsubscribe link
     #edit-preference-unsubscribe-link{
       @extend .internals-buttons;
+
       display: inline-block;
       margin-top: 5px;
       margin-bottom: 15px;
     }
-    // End Unsubscribe link
+    /// End Unsubscribe link
   }
-  // End Edit preferences form section
+  /// End Edit preferences form section
 }
-// End Edit preferences container
+/// End Edit preferences container
 
-// *********************************
-// END EDIT PREFERENCES PAGE CONTENT
-// *********************************
+/// *********************************
+/// END EDIT PREFERENCES PAGE CONTENT
+/// *********************************
 
 /**/
 /**/
 
-// ************************
-// UNSUBSCRIBE PAGE CONTENT
-// ************************
+/// ************************
+/// UNSUBSCRIBE PAGE CONTENT
+/// ************************
 
-// Unsubscribe page title
+/// Unsubscribe page title
 #subscription-title{
   @extend .internals-titles;
 }
-// End Unsubscribe page title
+/// End Unsubscribe page title
 
-// Subscription form
+/// Subscription form
 #subscription-form{
   p{
     // text-align: right;
     // margin-left: 0px;
   }
 
-  // Subscription alerts
+  /// Subscription alerts
   #subscription-message-section{
     p{
       font-weight: bold;
@@ -620,11 +624,11 @@
       margin: 0px;
     }
   }
-  // End Subscription alerts
+  /// End Subscription alerts
 
-  // Subscriptions question form section
+  /// Subscriptions question form section
   #subscription-question-section{
-    // Emails titles
+    /// Emails titles
     h2{
       color: $text-color;
       font-weight: bold;
@@ -632,174 +636,201 @@
       text-transform: none;
       padding-bottom: 10px;
     }
-    // End Emails titles
+    /// End Emails titles
 
-    // Options descriptions
+    /// Options descriptions
     p{
       color: $text-color;
-      font-size: 16px;
+      font-size: $body-font-size;
       font-weight: normal;
       text-align: left;
       text-transform: none;
       padding-bottom: 10px;
       margin-left: 25px;
     }
-    // End Options descriptions
+    /// End Options descriptions
 
-    // Checkboxes
+    /// Checkboxes
     input{
-      font-size: 16px;
+      font-size: $body-font-size;
       margin-left: 0px;
     }
-    // End Checkboxes
+    /// End Checkboxes
 
-    // Bold options
+    /// Bold options
     span{
       color: $text-color;
-      font-size: 16px;
+      font-size: $body-font-size;
       font-weight: bold;
       text-transform: none;
       padding-top: 10px;
       padding-left: 5px;
     }
-    // End Bold options
+    /// End Bold options
   }
-  // End Subscriptions question form section
+  /// End Subscriptions question form section
 
-  // Unsubscribe save button
+  /// Unsubscribe save button
   #subscription-save-btn{
     @extend .internals-buttons;
   }
-  // End Unsubscribe save button
+  /// End Unsubscribe save button
 }
-// End Subscription form
+/// End Subscription form
 
-// ****************************
-// END UNSUBSCRIBE PAGE CONTENT
-// ****************************
+/// ****************************
+/// END UNSUBSCRIBE PAGE CONTENT
+/// ****************************
 
 @media (min-width: 768px) {
 
-  // Internals section & legal page container
+  /// Internals section & legal page container
   .internals-section, .legal-page-background{
     padding-bottom: 100px;
   }
-  // End Internals section & legal page container
+  /// End Internals section & legal page container
 
-  // Internals general titles
+  /// Internals general titles
   .internals-titles{
     font-size: 36px !important;
   }
-  // End Internals general titles
+  /// End Internals general titles
 
   /**/
   /**/
 
-  // *************************************
-  // GOOGLE LOCATIONS SUGGESTIONS DROPDOWN
-  // *************************************
+  /// *************************************
+  /// GOOGLE LOCATIONS SUGGESTIONS DROPDOWN
+  /// *************************************
 
-  // Location search bar element
+  /// Location search bar element
   .search-bar-element.search-field-container.search-location-field{
-    // Google locations suggestions dropdown
+    /// Google locations suggestions dropdown
     #suggestions{
-      padding-right: 15px !important;
+      padding-right: 15px !important; /// <- Set same as the search bar elements separation
 
       .list-group-item{
         text-align: left;
       }
     }
-    // End Google locations suggestions dropdown
+    /// End Google locations suggestions dropdown
   }
-  // End Location search bar element
+  /// End Location search bar element
 
-  // *****************************************
-  // END GOOGLE LOCATIONS SUGGESTIONS DROPDOWN
-  // *****************************************
+  /// Location search bar element for search small
+  @if $search-small{
+    // Home search bar
+    .search-desktop-home{
+      .search-bar-element.search-field-container.search-location-field{
+        /// Google locations suggestions dropdown
+        #suggestions{
+          padding-right: 0px !important;
+        }
+        /// End Google locations suggestions dropdown
+      }
+    }
+    // End Home search bar
+
+    // Home search bar
+    .search-desktop{
+      .search-bar-element.search-field-container.search-location-field{
+        /// Google locations suggestions dropdown
+        #suggestions{
+          padding-right: 15px !important;
+        }
+        /// End Google locations suggestions dropdown
+      }
+    }
+    // End Home search bar
+  }
+  /// End Location search bar element for search small
+
+  /// *****************************************
+  /// END GOOGLE LOCATIONS SUGGESTIONS DROPDOWN
+  /// *****************************************
 
   /**/
   /**/
 
-  // ********************************************************************
-  // PRIVACY POLICY, TERMS AND CONDITIONS AND COOKIE POLICY PAGES CONTENT
-  // ********************************************************************
+  /// ********************************************************************
+  /// PRIVACY POLICY, TERMS AND CONDITIONS AND COOKIE POLICY PAGES CONTENT
+  /// ********************************************************************
 
-  // Privacy policy & terms and conditions container
+  /// Privacy policy & terms and conditions container
   #cb-legal-content-block{
-    // Cookie Policy
+    /// Cookie Policy
     #cookiesPolicy, #cookiesList{
-      // Cookie Policy table
+      /// Cookie Policy table
       table{
         td{
           padding: 5px;
 
           p{
-            font-size: 16px;
+            font-size: $body-font-size;
           }
         }
       }
 
-      // Cookie Policy sub-title
+      /// Cookie Policy sub-title
       h3{
         font-size: 28px !important;
       }
     }
-    // End Cookie Policy
+    /// End Cookie Policy
   }
-  // End Privacy policy & terms and conditions container
+  /// End Privacy policy & terms and conditions container
 
-  // ************************************************************************
-  // END PRIVACY POLICY, TERMS AND CONDITIONS AND COOKIE POLICY PAGES CONTENT
-  // ************************************************************************
+  /// ************************************************************************
+  /// END PRIVACY POLICY, TERMS AND CONDITIONS AND COOKIE POLICY PAGES CONTENT
+  /// ************************************************************************
 
   /**/
   /**/
 
-  // *****************************
-  // EDIT PREFERENCES PAGE CONTENT
-  // *****************************
+  /// *****************************
+  /// EDIT PREFERENCES PAGE CONTENT
+  /// *****************************
 
-  // Edit preferences container
+  /// Edit preferences container
   #edit-preference-view{
-    // Unsubscribe align
+    /// Unsubscribe align
     .top-buffer{
       margin-top: 0px;
     }
-    // Unsubscribe align
+    /// Unsubscribe align
 
-    // Edit preferences form section
+    /// Edit preferences form section
     #edit-preference-form{
-      // Edit preferences update button
+      /// Edit preferences update button
       #edit-preference-update-btn{
         float: left;
       }
-      // End Edit preferences update button
+      /// End Edit preferences update button
 
-      // Unsubscribe link
+      /// Unsubscribe link
       #edit-preference-unsubscribe-link{
         float: right;
       }
-      // End Unsubscribe link
+      /// End Unsubscribe link
     }
-    // End Edit preferences form section
+    /// End Edit preferences form section
   }
-  // End Edit preferences container
+  /// End Edit preferences container
 
-  // *********************************
-  // END EDIT PREFERENCES PAGE CONTENT
-  // *********************************
+  /// *********************************
+  /// END EDIT PREFERENCES PAGE CONTENT
+  /// *********************************
 
   /**/
   /**/
 
-  // **********************
-  // JOIN FORM PAGE CONTENT
-  // **********************
+  /// **********************
+  /// JOIN FORM PAGE CONTENT
+  /// **********************
 
-  // Join form page conteiner and Join modal
+  /// Join form page conteiner and Join modal
   #join-entire-page-content, #jfi-modal-dialog, .jfi-success-container{
-
-    // Join right text and button container
+    /// Join right text and button container
     .join-button-footer-container{
       display: -webkit-box;
       display: -ms-flexbox;
@@ -815,20 +846,20 @@
       -ms-flex-pack: end;
       justify-content: flex-end;
     }
-    // End Join right text and button container
+    /// End Join right text and button container
 
-    // Join and animation container
+    /// Join and animation container
     .join-button-container, #join-apply-block-mobile .text-right{
       display: table;
 
-      // Join button
+      /// Join button
       #join-button-mobile, #join-button, #jfi-apply{
         display: table-cell;
         vertical-align: middle;
       }
-      // End Join button
+      /// End Join button
 
-      // Spinner animation
+      /// Spinner animation
       span.btn.primary-button.text-weight-bold{
         @include on-event(true){
           display: table-cell;
@@ -837,83 +868,59 @@
           padding: 0px 15px;
         }
       }
-      // End Spinner animation
+      /// End Spinner animation
     }
-    // End Join and animation container
+    /// End Join and animation container
   }
-  // End Join form page conteiner and Join modal
+  /// End Join form page conteiner and Join modal
 
-  // **************************
-  // END JOIN FORM PAGE CONTENT
-  // **************************
+  /// **************************
+  /// END JOIN FORM PAGE CONTENT
+  /// **************************
 }
 
 @media (min-width: 992px) {
 
-  // **********************
-  // JOIN FORM PAGE CONTENT
-  // **********************
+  /// **********************
+  /// JOIN FORM PAGE CONTENT
+  /// **********************
 
-  // Join form page conteiner and Join modal
+  /// Join form page conteiner and Join modal
   #join-entire-page-content, #jfi-modal-dialog, .jfi-success-container{
     #join-page-content-section{
       padding-bottom: 0px;
     }
-
-    // By joining our Talent Network you have not officially applied to a position text
-    .join-is-not-apply-mobile, .join-is-not-apply{
-      font-size: 12px;
-    }
-    // End By joining our Talent Network you have not officially applied to a position text
   }
-  // End Join form page conteiner and Join modal
+  /// End Join form page conteiner and Join modal
 
-  // **************************
-  // END JOIN FORM PAGE CONTENT
-  // **************************
+  /// **************************
+  /// END JOIN FORM PAGE CONTENT
+  /// **************************
 
 }
 
 @media (min-width: 1200px) {
 
-  // *************************************
-  // GOOGLE LOCATIONS SUGGESTIONS DROPDOWN
-  // *************************************
+  /// *************************************
+  /// GOOGLE LOCATIONS SUGGESTIONS DROPDOWN
+  /// *************************************
 
   @if $label-inline{
-    // Location search bar element
+    /// Location search bar element
     .search-bar-element.search-field-container.search-location-field{
-      // Google locations suggestions dropdown
+      /// Google locations suggestions dropdown
       #suggestions{
-        padding-left: 80px !important;
-        // padding-right: 48px !important;
+        top: 40px; /// <- Set same as the input height
+        padding-left: 91px !important; /// <- Set same as the label widtt
+        padding-right: 30px !important; /// <- Set same as the search bar elements separation
       }
-      // End Google locations suggestions dropdown
+      /// End Google locations suggestions dropdown
     }
-    // End Location search bar element
+    /// End Location search bar element
   }
 
-  // *****************************************
-  // END GOOGLE LOCATIONS SUGGESTIONS DROPDOWN
-  // *****************************************
-
-  // **********************
-  // JOIN FORM PAGE CONTENT
-  // **********************
-
-  // Join form page conteiner and Join modal
-  #join-entire-page-content, #jfi-modal-dialog, .jfi-success-container{
-    // By joining our Talent Network you have not officially applied to a position text
-    .join-is-not-apply-mobile, .join-is-not-apply{
-      font-size: 16px;
-    }
-    // End By joining our Talent Network you have not officially applied to a position text
-  }
-  // End Join form page conteiner and Join modal
-
-
-  // **************************
-  // END JOIN FORM PAGE CONTENT
-  // **************************
+  /// *****************************************
+  /// END GOOGLE LOCATIONS SUGGESTIONS DROPDOWN
+  /// *****************************************
 
 }

@@ -1,28 +1,23 @@
-
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" ng-app="pencilblueApp">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
   <title>Jobs at [Company]</title>
 
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <link rel="stylesheet" type="text/css" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/bower_components/fontawesome/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/css/general_styles.css">
-  <link rel="stylesheet" type="text/css" href="assets/public/tn_job/version/99ce40f875dcf388fba9753bf5e039227ee7c405/css/tn_job_styles.css">
-  <!-- <link rel="stylesheet" type="text/css" href=""> -->
-  <link rel="stylesheet" type="text/css" href="assets/public/premium/css/premium_custom_styles.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <script type="text/javascript" src="assets/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/compiled_bower/required_bower_scripts.min.js"></script>
+  <!-- Google maps and Dropbox JS Files -->
+
+  <!-- TN Job style -->
+  <link rel="stylesheet" type="text/css" href="public/bravo/version/a53541aabaddbe004d77a2fa922c310d481f71a1/dist/tn_job.css">
+  <!-- Boostrap, jQuery and Fontawesome -->
+  <script type="text/javascript" src="public/premium/version/a53541aabaddbe004d77a2fa922c310d481f71a1/dist/premium.bundle.js"></script>
+  <!-- Premium custom styles CSS -->
+  <link id="custom-styles" rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body id="premium-body" ng-controller="PencilBlueController">
 
-
-  <div id="src-tracking-loader" ng-controller="SourceTrackingFrontController"></div>
+<body id="premium-body" class="">
 
   <!-- Internals section -->
   <section class="internals-section">
@@ -48,86 +43,70 @@
                         <span class="browse-by-country-text">United States (136‎)‎</span>
                       </a>
                     </li>
-
-
-
                   </div>
 
                   <h1 id="browse-by-header" class="label-text">
                     <p>Job Locations <span class="label-strong" >in United States</span></p>
-
                     <p>at [Company]</p>
                   </h1>
+
                   <div id="sign-up-section">
                     <a id="sign-up-widget" class="jrp-sign-up-widget secondary-text-color" href="#">
                       <i class="fa fa-envelope-o sign-up-icon"></i>Sign up for job alert emails
                     </a>
-
                   </div>
+
                   <div id="browse-by-facet-items-section" class="row">
-                    <!--[if lt IE 10]>
-                    <style>
-                    @media only screen and (min-width: 768px) {
-                    #browse-by-facet-items-list li {
-                    width: 50%;
-                    float: left;
-                  }
-                }
-              </style>
-              <![endif]-->
-              <ul class="browse-by-element-list" id="browse-by-facet-items-list">
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Alabama (2)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Arizona (2)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">California (15)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Colorado (2)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Delaware (2)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Florida (12)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Georgia (7)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Idaho (1)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Illinois (3)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Indiana (13)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Kentucky (1)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Maryland (2)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Michigan (4)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Minnesota (7)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Mississippi (3)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Nebraska (3)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">New York (1)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">North Carolina (1)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Ohio (22)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Oregon (1)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">South Carolina (8)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Tennessee (1)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Texas (7)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Utah (1)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Virginia (4)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Washington (4)</a></li>
-                <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Wisconsin (7)</a></li>
+                    <ul class="browse-by-element-list" id="browse-by-facet-items-list">
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Alabama (2)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Arizona (2)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">California (15)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Colorado (2)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Delaware (2)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Florida (12)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Georgia (7)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Idaho (1)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Illinois (3)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Indiana (13)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Kentucky (1)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Maryland (2)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Michigan (4)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Minnesota (7)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Mississippi (3)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Nebraska (3)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">New York (1)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">North Carolina (1)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Ohio (22)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Oregon (1)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">South Carolina (8)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Tennessee (1)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Texas (7)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Utah (1)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Virginia (4)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Washington (4)</a></li>
+                      <li class="browse-by-element"><a class="primary-text-color browse-by-item-link" href="#">Wisconsin (7)</a></li>
 
-              </ul>
-
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-
           </div>
+          <!-- End Browse by Results -->
+
         </div>
       </div>
     </div>
-    <!-- End Browse by Results -->
+  </section>
+  <!-- End Internals section -->
 
-  </div>
-</div>
-</div>
-</section>
-<!-- End Internals section -->
+  <!-- Footer -->
+  <footer>
+  </footer>
+  <!-- End Footer -->
 
-
-<!-- Footer -->
-<footer>
-</footer>
-<!-- End Footer -->
-
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX9bDtzse0NKvnFFtJOY-G3DJMwSuZzHg&libraries=places"></script>
-<script type="text/javascript" src="assets/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/angular/scripts/tn_scripts.min.js"></script>
-
+  <!-- Replace CMS media flag -->
+  <script src="js/replaceMedia.js" charset="utf-8"></script>
+  <!-- End Replace CMS media flag -->
 </body>
 </html>

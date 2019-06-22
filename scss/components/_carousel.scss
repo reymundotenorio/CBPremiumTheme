@@ -1,13 +1,14 @@
-// -----------------------------------------------------------------------------
-// This file contains all styles related to the carousel fading component.
-// -----------------------------------------------------------------------------
+/// -----------------------------------------------------------------------------
+/// This file contains all styles related to the carousel fading component.
+/// -----------------------------------------------------------------------------
 
-// Carousel fade
+/// Carousel fade
 .carousel-fade{
   .carousel-inner{
     .item{
       -webkit-transition-property: opacity;
       transition-property: opacity;
+      // -webkit-transition-delay: 0.6s;
       // transition-delay: 0.6s;
     }
 
@@ -33,50 +34,47 @@
     }
   }
 }
-// End Carousel fade
+/// End Carousel fade
 
-// Custom carousel
+/// Custom carousel
 .custom-carousel{
   background-color: $body-color;
 
   .indicators-container{
-    width: 100%;
     position: absolute;
     left: 0px;
     right: 0px;
     bottom: 10px;
     top: auto;
+    width: 100%;
     margin: 0 auto;
 
     .carousel-indicators{
+      /// Align indicators (Right and Left = 0 to Centrate)
+      left: 0px;
+      right: 0px;
+      /// End Align indicators (Right and Left = 0 to Centrate)
+
       text-align: center;
       width: auto;
       margin: 0px 15px;
       bottom: 0px;
 
-      // Align indicators (Right and Left = 0 to Centrate)
-      left: 0px;
-      right: 0px;
-      // End Align indicators (Right and Left = 0 to Centrate)
-
       li{
-        background-color: rgba(0,0,0,0);
+        background-color: rgba($black, 0);
         border: 1px solid $primary-color;
         width: 15px;
         height: 15px;
-        margin: 0px;
         border-radius: 100%;
 
-        // Space between indicators
+        /// Space between indicators
         margin: 0px 5px;
-        // End Space between indicators
 
-        -webkit-transition: all 0.3s ease;
         -webkit-transition: all 0.3s ease;
         transition: all 0.3s ease;
 
         @include on-event{
-          background-color: rgba($primary-color,0.5);
+          background-color: rgba($primary-color, 0.5);
         }
       }
 
@@ -92,7 +90,7 @@
     }
   }
 
-  // Align content vertically
+  /// Align content vertically
   .carousel-inner{
     // padding-bottom: 60px;
 
@@ -105,7 +103,7 @@
       // display: table;
       // width: 100%;
 
-      // OR
+      /// OR
 
       // display: flex;
       // -webkit-box-orient: horizontal;
@@ -124,7 +122,7 @@
       // display: table-cell;
       // vertical-align: middle;
 
-      // OR
+      /// OR
 
       // display: flex;
       // -webkit-box-orient: horizontal;
@@ -139,44 +137,41 @@
       // justify-content: center;
     }
   }
-  // End Align content vertically
+  /// End Align content vertically
 
 }
-// End Custom carousel
+/// End Custom carousel
 
 @media (min-width: 768px) {
 
-  // Custom carousel
+  /// Custom carousel
   .custom-carousel{
     .indicators-container{
       width: 750px;
     }
   }
-  // End Custom carousel
 
 }
 
 
 @media (min-width: 992px) {
 
-  // Custom carousel
+  /// Custom carousel
   .custom-carousel{
     .indicators-container{
       width: 970px;
     }
   }
-  // End Custom carousel
 
 }
 
 @media (min-width: 1200px) {
 
-  // Custom carousel
+  /// Custom carousel
   .custom-carousel{
     .indicators-container{
       width: 1170px;
     }
   }
-  // End Custom carousel
 
 }

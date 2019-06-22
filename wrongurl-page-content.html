@@ -1,28 +1,23 @@
-
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" ng-app="pencilblueApp">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
   <title>Jobs at [Company]</title>
 
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <link rel="stylesheet" type="text/css" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/bower_components/fontawesome/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/css/general_styles.css">
-  <link rel="stylesheet" type="text/css" href="assets/public/tn_job/version/99ce40f875dcf388fba9753bf5e039227ee7c405/css/tn_job_styles.css">
-  <!-- <link rel="stylesheet" type="text/css" href=""> -->
-  <link rel="stylesheet" type="text/css" href="assets/public/premium/css/premium_custom_styles.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <script type="text/javascript" src="assets/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/compiled_bower/required_bower_scripts.min.js"></script>
+  <!-- Google maps and Dropbox JS Files -->
+
+  <!-- TN Job style -->
+  <link rel="stylesheet" type="text/css" href="public/bravo/version/a53541aabaddbe004d77a2fa922c310d481f71a1/dist/tn_job.css">
+  <!-- Boostrap, jQuery and Fontawesome -->
+  <script type="text/javascript" src="public/premium/version/a53541aabaddbe004d77a2fa922c310d481f71a1/dist/premium.bundle.js"></script>
+  <!-- Premium custom styles CSS -->
+  <link id="custom-styles" rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body id="premium-body" ng-controller="PencilBlueController">
 
-
-  <div id="src-tracking-loader" ng-controller="SourceTrackingFrontController"></div>
+<body id="premium-body" class="">
 
   <!-- Internals section -->
   <section class="internals-section">
@@ -49,8 +44,8 @@
   </footer>
   <!-- End Footer -->
 
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX9bDtzse0NKvnFFtJOY-G3DJMwSuZzHg&libraries=places"></script>
-  <script type="text/javascript" src="assets/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/angular/scripts/tn_scripts.min.js"></script>
-
+  <!-- Replace CMS media flag -->
+  <script src="js/replaceMedia.js" charset="utf-8"></script>
+  <!-- End Replace CMS media flag -->
 </body>
 </html>

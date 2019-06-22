@@ -1,324 +1,253 @@
-// -----------------------------------------------------------------------------
-// This file contains styles that are specific to the job details page (JDP).
-// -----------------------------------------------------------------------------
+/// -----------------------------------------------------------------------------
+/// This file contains styles that are specific to the job details page (JDP).
+/// -----------------------------------------------------------------------------
 
-// Fixing job details containers bug
+/// Fixing job details containers bug
 #job-details-page .container .container{
   width: 100%;
   padding-left: 0px;
   padding-right: 0px;
 }
-// End Fixing job details containers bug
+/// End Fixing job details containers bug
 
-// Apply buttons
+
+/// APPLY SECTIONS
+
+/// Apply buttons
 #jdp-apply-button-top, #jdp-apply-button-bottom, #jdp-apply-button-top-mobile, #jdp-apply-button-bottom-mobile{
   @extend .internals-buttons;
 
-  max-width: 185px;
+  max-width: 187px;
   margin: 0 auto;
   margin-bottom: 20px;
 }
-// End Apply buttons
+/// End Apply buttons
 
-// Not ready to apply link
+/// Not ready to apply link
 #jdp-not-ready-to-apply-link-top,
 #jdp-not-ready-to-apply-link-bottom{
-  color: $secondary-color;
-  font-weight: bold;
-  text-align: center;
-  text-transform: capitalize; // <- Always
+  color: $hover-color;
+  font-weight: normal;
+
   margin-top: 0px;
+  text-align: center;
+  text-transform: capitalize; /// <- Always
 }
-// End Not ready to apply link
+/// End Not ready to apply link
+
+/// END APPLY SECTIONS
 
 
-// JOB TITLE, DATE POSTED AND APPLY TOP BUTTON CONTAINER
+/// JOB TITLE, DATE POSTED AND APPLY TOP BUTTON CONTAINER
 .jdp-title-inner-container{
-  background-color: $body-color;
-  padding: 15px;
   display: table;
   width: 100%;
+  padding: 15px;
   margin-top: 0px;
+  background-color: transparent;
 
-  // Job title, date posted and apply top button section
+  /// Job title, date posted and apply top button section
   .jdp-title-block-position{
-
-    // Job title
+    /// Job title
     .jdp-job-title{
       @extend .internals-titles;
 
       text-align: center;
       padding-bottom: 0px;
 
-      // *** External Vendor Design ***
-      // color: #3e434b;
-      // *** End External Vendor Design ***
-
       .jdp-title-job-title{
-        // *** External Vendor Design ***
-        // font-weight: bold;
-        // *** End External Vendor Design ***
       }
 
       .jdp-title-job-in{
-        // text-transform: lowercase; // <- Standard
-
-        // *** External Vendor Design ***
-        // display: none;
-        // *** End External Vendor Design ***
+        // text-transform: lowercase; /// <- Standard
       }
 
       .jdp-title-job-location{
-        // *** External Vendor Design ***
-        // display: none;
-        // *** End External Vendor Design ***
       }
 
       .jdp-title-job-at{
-        // text-transform: lowercase; // <- Standard
+        // text-transform: lowercase; /// <- Standard
 
-        // *** External Vendor Design ***
+        /// Break in another line
+
         // &:before{
         //   content: "\A";
         //   white-space: pre;
         // }
-        // *** End External Vendor Design ***
+
+        /// End Break in another line
       }
 
       .jdp-title-job-company{
       }
     }
-    // End Job title
+    /// End Job title
 
-    // Date posted
+    /// Date posted
     #jdp-title-date-posted{
       color: $text-color;
-      padding-top: 10px;
       text-align: center;
-
-      // *** External Vendor Design ***
-      // color: #231f20;
-      // *** End External Vendor Design ***
+      padding-top: 10px;
 
       strong{
-        // *** External Vendor Design ***
         // font-weight: normal;
-        // *** End External Vendor Design ***
       }
     }
-    // End Date posted
+    /// End Date posted
   }
-  // End Job title, date posted and apply top button section
+  /// End Job title, date posted and apply top button section
 }
-// END JOB TITLE, DATE POSTED AND APPLY TOP BUTTON CONTAINER
+/// END JOB TITLE, DATE POSTED AND APPLY TOP BUTTON CONTAINER
 
-// JOB DETAILS CONTENT
+/// JOB DETAILS CONTENT
 .job-details-content{
-  background-color: $body-color;
-  padding-top: 0px;
-
-  border-top: 3px solid $grey-divider;
+  border-top: 3px solid $hover-color;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
 
-  // Job description, job requirements, job snapshot & about us title
+  padding-top: 0px;
+  background-color: transparent;
+
+  /// Job description, job requirements, job snapshot & about us title
   .content-card-header{
     color: $primary-color;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: left;
-    text-transform: capitalize;
 
-    padding-bottom: 5px;
     text-align: center;
-
-    // *** External Vendor Design ***
-    // font-size: 24px;
-    // color: #231f20;
-    // *** End External Vendor Design ***
+    font-size: 30px; /// <- Always
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-bottom: 10px;
   }
-  // End Job description, job requirements, job snapshot & about us title
+  /// End Job description, job requirements, job snapshot & about us title
 
-  // Snapshot section
+  /// Snapshot section
   #jdp-job-snapshot-section{
-    // background-color: $body-color;
+    // background-color: transparent;
   }
-  // End Snapshot section
+  /// End Snapshot section
 
-  // Social share
+  /// Social share
   #jdp-social-sharing-section{
-    border-top: 3px solid $grey-divider;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
-
-    // *** External Vendor Design ***
-    // border-top: none;
-    // *** End External Vendor Design ***
+    border-top: 3px solid $hover-color;
   }
-  // End Social share
+  /// End Social share
 
-  // Job snapshot container
+  /// Job snapshot container
   .jdp-job-snapshot-card{
-    padding: 0px 0px 15px 0px;
+    padding: 0px;
+    padding-bottom: 15px;
     margin-bottom: 30px;
 
-    // *** External Vendor Design ***
-    // border: 1px solid $grey;
-    // border-radius: 10px;
-    // border-top-left-radius: 15px;
-    // border-top-right-radius: 15px;
-    // padding-bottom: 0px;
-    // *** End External Vendor Design ***
-
-    // Snapshot header
+    /// Snapshot header
     .content-card-header{
-      border-top-left-radius: 3px;
-      border-top-right-radius: 3px;
-      border-bottom: 2px solid $grey-divider;
-      margin: 0px 20px 0px 20px;
-      padding: 20px 5px 20px 5px;
+      margin: 0px 20px;
+      padding: 20px 5px 8px;
 
-      // *** External Vendor Design ***
-      // background: $grey;
-      // margin: 0px;
-      // padding: 19px 25px 20px 25px;
-      // border-bottom: none;
-      // border-top-left-radius: 10px;
-      // border-top-right-radius: 10px;
-      // *** End External Vendor Design ***
+      // border-top-left-radius: 3px;
+      // border-top-right-radius: 3px;
+      // border-bottom: 2px solid $hover-color;
     }
-    // End Snapshot header
+    /// End Snapshot header
 
-    // Snapshot list
+    /// Snapshot list
     .snapshot-padding{
-      padding: 20px;
       line-height: 1.3;
+      padding: 8px 20px 20px;
 
-      // *** External Vendor Design ***
-      // background-color: $grey;
-      // margin-bottom: 0px;
-      // border-bottom-left-radius: 10px;
-      // border-bottom-right-radius: 10px;
-      // *** End External Vendor Design ***
-
-      // List item
+      /// List item
       li{
-        padding-bottom: 0px;
+        padding-bottom: 5px;
 
-        // *** External Vendor Design ***
-        // padding-bottom: 10px;
-        // *** End External Vendor Design ***
+        &.job-location{
+          padding-bottom: 15px; /// <- Fixing space issue caused by enabling street address
+        }
 
-        // Item icon
+        /// Item icon
         .snapshot-icon.secondary-text-color{
-          color: $secondary-color;
+          color: $primary-color;
+
           font-size: 24px;
-          padding-top: 5px;
+          padding-top: 6px;
           padding-right: 10px;
+
           // display: table-cell;
 
+          /// Job type
           &.glyphicon-triangle-top{
             padding-top: 0px;
           }
 
+          /// Experience
+          &.fa-briefcase{
+            padding-top: 7px;
+          }
+
+          /// Date posted
           &.fa-clock-o, &.fa-info-circle{
             padding-top: 5px;
           }
-
-          // *** External Vendor Design ***
-          // color: #231f20;
-          // *** End External Vendor Design ***
         }
-        // End Item icon
+        /// End Item icon
 
-        // Item title
+        /// Item title
         .snapshot-text{
           color: $text-color;
-
-          // *** External Vendor Design ***
-          // color: #231f20;
-          // *** End External Vendor Design ***
 
           strong{
             // font-weight: normal;
           }
         }
-        // End Item title
+        /// End Item title
 
-        // Item information
+        /// Item information
         .secondary-text-color{
           color: $secondary-color;
           font-weight: normal;
-
-          // *** External Vendor Design ***
-          // color: #231f20;
-          // *** End External Vendor Design ***
         }
-        // End Item information
+        /// End Item information
 
-        // Item link
+        /// Item link
         .job-snapshot-link{
           color: $hover-color;
-          font-weight: bold;
+          font-weight: normal;
 
           @include on-event{
-            color: tint($secondary-color, 30%);
+            color: tint($hover-color, 30%);
           }
-
-          // *** External Vendor Design ***
-          // text-decoration: none;
-          //
-          // @include on-event{
-          //   text-decoration: underline;
-          // }
-          // *** External Vendor Design ***
         }
-        // End link
+        /// End Item link
       }
-      // End List item
+      /// End List item
     }
-    // End Snapshot list
+    /// End Snapshot list
   }
-  // End Job snapshot container
+  /// End Job snapshot container
 
-  // About us section
+  /// About us section
   .jdp-about-us-card{
-    // background-color: $body-color;
-    // border-top: 3px solid $grey-divider;
-    // border-top-left-radius: 3px;
-    // border-top-right-radius: 3px;
+    border-top: 3px solid $hover-color;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background-color: transparent;
   }
-  // End About us section
+  /// End About us section
 
-  // Job description section
+  /// Job description section
   #jdp-job-description-section{
-    background-color: $body-color;
-    border-top: 3px solid $grey-divider;
+    border-top: 3px solid $hover-color;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     margin-top: 0px;
 
-    // *** External Vendor Design ***
-    // border-top: none;
-    // border-bottom: 1px solid $grey-divider;
-    // *** End External Vendor Design ***
-
-    // Description content
+    /// Description content
     .jdp-job-description-card{
       padding-top: 0px;
       margin-bottom: 0px;
 
-      // *** External Vendor Design ***
-      // padding-left: 0px;
-      // padding-right: 0px;
-      // *** End External Vendor Design ***
-
       &, p, li{
         color: $text-color;
-
-        // *** External Vendor Design ***
-        // color: #231f20;
-        // *** End External Vendor Design ***
       }
 
       a{
@@ -330,37 +259,20 @@
         }
       }
     }
-    // End Description content
+    /// End Description content
   }
-  // End Job description section
+  /// End Job description section
 
-  // Job requirements section
+  /// Job requirements section
   #jdp-job-requirements-section{
-    background-color: $body-color;
+    // border-top: 3px solid $hover-color;
+    // border-top-left-radius: 3px;
+    // border-top-right-radius: 3px;
 
-    // border-bottom: 3px solid $grey-divider;
-    // border-bottom-left-radius: 3px;
-    // border-bottom-right-radius: 3px;
-
-    // *** External Vendor Design ***
-    border-bottom: none;
-    // *** End External Vendor Design ***
-
-    // Requirements content
+    /// Requirements content
     .jdp-job-requirements-card{
-      // margin-bottom: 0px;
-
-      // *** External Vendor Design ***
-      // padding-left: 0px;
-      // padding-right: 0px;
-      // *** End External Vendor Design ***
-
       &, p, li{
         color: $text-color;
-
-        // *** External Vendor Design ***
-        // color: #231f20;
-        // *** End External Vendor Design ***
       }
 
       a{
@@ -372,275 +284,174 @@
         }
       }
     }
-    // End Requirements content
+    /// End Requirements content
   }
-  // End Job requirements section
+  /// End Job requirements section
 
-  // Company logo & apply bottom section
+  /// Company logo & apply bottom section
   #jdp-bottom-apply-section{
-    margin-top: 10px;
-    background-color: $body-color;
-
-    margin-top: 10px;
-    border-top: 3px solid $grey-divider;
+    border-top: 3px solid $hover-color;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
+    margin-top: 10px;
 
-    // border-bottom-left-radius: 3px;
-    // border-bottom-right-radius: 3px;
-
-    // Bottom apply card
+    /// Bottom apply card
     .jdp-bottom-apply-card{
       padding-bottom: 5px;
-
-      // *** External Vendor Design ***
-      // padding: 0px;
-      // padding-bottom: 5px;
-      // *** End External Vendor Design ***
     }
-    // End Bottom apply card
+    /// End Bottom apply card
 
-    // Bottom apply button container
+    /// Bottom apply button container
     #jdp-bottom-apply-button-col{
       padding-top: 20px;
 
-      // *** External Vendor Design ***
-      // border-bottom: 1px solid $grey-divider;
-      // padding-bottom: 20px;
-      // *** End External Vendor Design ***
-
       #jdp-not-ready-to-apply-link-bottom{
-        // margin-bottom: 5px;
       }
-
     }
-    // End Bottom apply button container
+    /// End Bottom apply button container
   }
-  // Company logo & apply bottom section
+  /// Company logo & apply bottom section
 
-  // Check out our similar jobs content
+  /// Check out our similar jobs content
   #jdp-similar-jobs-row{
-    background-color: $body-color;
     padding: 10px 0px;
     margin: 0px;
 
-    // Fixing Check out our similar job bug
-    // >.col-sm-12{
-    //   padding-left: 0px;
-    //   padding-right: 0px;
-    // }
-    // End Fixing Check out our similar job bug
-
-    // Check out our similar jobs title
+    /// Check out our similar jobs title
     h3{
-      font-size: 30px; // <- Always
-      font-weight: bold;
       color: $primary-color;
       text-align: center;
-      text-transform: uppercase; // <- Always
+      font-size: 30px; /// <- Always
+      font-weight: bold;
+      text-transform: uppercase; /// <- Always
       margin-bottom: 0px;
       padding-bottom: 0px;
 
-      // *** External Vendor Design ***
-      // color: #231f20;
-      // *** End External Vendor Design ***
-
       b, strong{
-        // *** External Vendor Design ***
         // font-weight: normal;
-        // *** End External Vendor Design ***
       }
     }
-    // End Check out our similar jobs title
+    /// End Check out our similar jobs title
 
-    // Similar jobs list
+    /// Similar jobs list
     .similar-jobs{
       text-align: center;
 
       li{
-        // Similar jobs title
+        /// Similar jobs title
         .similar-jobs-tag{
-          color: $primary-color;
-
-          // *** External Vendor Design ***
-          // font-weight: bold;
-          // *** End External Vendor Design ***
+          color: $hover-color;
         }
-        // End Similar job title
+        /// End Similar job title
       }
 
+      /// Divider
       >li+li:before{
         padding: 0px;
         content: "";
-        color: $primary-color;
+        color: $hover-color;
       }
+      /// Divider
     }
-    // End Similar jobs list
+    /// End Similar jobs list
   }
-  // End Check out our similar jobs content
+  /// End Check out our similar jobs content
 }
-// END JOB DETAILS CONTENT
+/// END JOB DETAILS CONTENT
 
 
 @media (min-width: 768px) {
 
-  // Not ready to apply link
-  #jdp-not-ready-to-apply-link-top,
-  #jdp-not-ready-to-apply-link-bottom{
-    font-size: 12px;
-  }
-  // End Not ready to apply link
-
-  // JOB TITLE, DATE POSTED AND APPLY TOP BUTTON CONTAINER
+  /// JOB TITLE, DATE POSTED AND APPLY TOP BUTTON CONTAINER
   .jdp-title-inner-container{
     margin-top: 0px;
 
-    // Job title, date posted and apply top button section
+    /// Job title, date posted and apply top button section
     .jdp-title-block-position{
-      // Job title
+      /// Job title
       .jdp-job-title{
         text-align: left;
       }
-      // End Job title
+      /// End Job title
 
-      // Date posted
+      /// Date posted
       #jdp-title-date-posted{
         text-align: left;
       }
-      // End Date posted
+      /// End Date posted
     }
-    // Job title, date posted and apply top button section
+    /// Job title, date posted and apply top button section
 
-    // Apply button and not ready to apply text container
+    /// Apply button and not ready to apply text container
     .jdp-top-apply-block-position{
       width: 25%;
-      vertical-align: middle;
       padding-top: 0px;
+      vertical-align: middle;
     }
-    // End Apply button and not ready to apply text container
+    /// End Apply button and not ready to apply text container
   }
-  // END JOB TITLE, DATE POSTED AND APPLY TOP BUTTON CONTAINER
+  /// END JOB TITLE, DATE POSTED AND APPLY TOP BUTTON CONTAINER
 
-  // JOB DETAILS CONTENT
+
+  /// JOB DETAILS CONTENT
   .job-details-content{
-    // Job description, job requirements, job snapshot & about us title
+    /// Job description, job requirements, job snapshot & about us title
     .content-card-header{
       text-align: left;
     }
-    // End Job description, job requirements, job snapshot & about us title
+    /// End Job description, job requirements, job snapshot & about us title
 
-    // Company logo & apply bottom section
+    /// Company logo & apply bottom section
     #jdp-bottom-apply-section{
-      // Company logo container
+      /// Company logo container
       #jdp-bottom-apply-company-logo-col{
         .multi-brand-image{
           text-align: left;
         }
       }
-      // End Company logo container
+      /// End Company logo container
 
-      // Bottom apply button container
+      /// Bottom apply button container
       #jdp-bottom-apply-button-col{
         padding-top: 0px;
       }
-      // End Bottom apply button container
+      /// End Bottom apply button container
     }
-    // End Company logo & apply bottom section
+    /// End Company logo & apply bottom section
 
-    // Check out our similar jobs content
+    /// Check out our similar jobs content
     #jdp-similar-jobs-row{
-      // Check out our similar jobs title
+      /// Check out our similar jobs title
       h3{
         text-align: left;
       }
-      // End Check out our similar jobs title
+      /// End Check out our similar jobs title
 
-      // Similar jobs list
+      /// Similar jobs list
       .similar-jobs{
         text-align: left;
 
+        /// Divider
         >li+li:before{
           padding: 0 0.55em;
           content: "|";
-
-          // *** External Vendor Design ***
-          // padding: 0 1em;
-          // *** End External Vendor Design ***
         }
+        /// End Divider
       }
-      // End Similar jobs list
+      /// End Similar jobs list
     }
-    // End Check out our similar jobs content
+    /// End Check out our similar jobs content
   }
-  // END JOB DETAILS CONTENT
-
-
-
-  // *** External Vendor Design ***
-
-  // // Apply button top
-  // #jdp-apply-button-top{
-  //   margin-right: 0px;
-  // }
-  // // End Apply button top
-  //
-  // // Apply button bottom
-  // #jdp-apply-button-bottom{
-  //   margin-left: 0px;
-  // }
-  // // End Apply button bottom
-  //
-  // // Not ready to apply link top
-  // #jdp-not-ready-to-apply-link-top{
-  //   text-align: right;
-  //   margin: 0 auto;
-  //   margin-right: 0px;
-  // }
-  // // End Not ready to apply link top
-  //
-  // // Not ready to apply link bottom
-  // #jdp-not-ready-to-apply-link-bottom{
-  //   text-align: left;
-  //   margin: 0 auto;
-  //   margin-left: 0px;
-  // }
-  // // End Not ready to apply link bottom
-  //
-  // // Apply bottom container
-  // .job-details-content #jdp-bottom-apply-button-col{
-  //   padding-top: 20px;
-  //   width: 100%
-  // }
-  // // End Apply bottom container
-
-  // *** End External Vendor Design ***
+  /// END JOB DETAILS CONTENT
 
 }
 
 @media (min-width: 992px) {
 
-  // Not ready to apply link
-  #jdp-not-ready-to-apply-link-top,
-  #jdp-not-ready-to-apply-link-bottom{
-    font-size: 16px;
-  }
-  // End Not ready to apply link
-
-  // JOB TITLE, DATE POSTED AND APPLY TOP BUTTON CONTAINER
-  .jdp-title-inner-container{
-    // Apply button and not ready to apply text container
-    .jdp-top-apply-block-position{
-      // width: 25%;
-    }
-    // End Apply button and not ready to apply text container
-  }
-  // END JOB TITLE, DATE POSTED AND APPLY TOP BUTTON CONTAINER
-
-  // JOB DETAILS CONTENT
+  /// JOB DETAILS CONTENT
   .job-details-content{
     border: none;
   }
-  // END JOB DETAILS CONTENT
-
+  /// END JOB DETAILS CONTENT
 
 }

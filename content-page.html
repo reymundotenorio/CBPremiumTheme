@@ -1,28 +1,23 @@
-
-<?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE html>
-<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" ng-app="pencilblueApp">
+<html lang="en-US" xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
   <title>Jobs at [Company]</title>
 
   <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
-
   <link rel="shortcut icon" href="img/favicon.png">
 
-  <link rel="stylesheet" type="text/css" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/bower_components/fontawesome/css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="assets/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/css/general_styles.css">
-  <link rel="stylesheet" type="text/css" href="assets/public/tn_job/version/99ce40f875dcf388fba9753bf5e039227ee7c405/css/tn_job_styles.css">
-  <!-- <link rel="stylesheet" type="text/css" href=""> -->
-  <link rel="stylesheet" type="text/css" href="assets/public/premium/css/premium_custom_styles.css">
-  <link rel="stylesheet" type="text/css" href="css/main.css">
-  <script type="text/javascript" src="assets/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/compiled_bower/required_bower_scripts.min.js"></script>
+  <!-- Google maps and Dropbox JS Files -->
+
+  <!-- TN Job style -->
+  <link rel="stylesheet" type="text/css" href="public/bravo/version/a53541aabaddbe004d77a2fa922c310d481f71a1/dist/tn_job.css">
+  <!-- Boostrap, jQuery and Fontawesome -->
+  <script type="text/javascript" src="public/premium/version/a53541aabaddbe004d77a2fa922c310d481f71a1/dist/premium.bundle.js"></script>
+  <!-- Premium custom styles CSS -->
+  <link id="custom-styles" rel="stylesheet" type="text/css" href="css/main.css">
 </head>
-<body id="premium-body" ng-controller="PencilBlueController">
 
-
-  <div id="src-tracking-loader" ng-controller="SourceTrackingFrontController"></div>
+<body id="premium-body" class="">
 
   <!-- Header -->
   <header id="back-top">
@@ -31,7 +26,7 @@
       <div class="container">
         <div class="row">
           <!-- Social share -->
-          <div class="col-xs-12 col-sm-12 pull-right">
+          <div class="col-xs-12 pull-right">
             <!-- Top header -->
             <div class="pull-right top-header">
               <!-- Join Our Talent Network -->
@@ -65,7 +60,7 @@
     <!-- Top navbar -->
     <section class="top-navbar">
 
-      <!-- Container -->
+      <!-- Tablet navbar -->
       <div class="container">
         <!-- Navbar brand top -->
         <div class="navbar-brand-top visible-sm visible-md">
@@ -74,8 +69,8 @@
             <div class="col-xs-6 col-md-6">
               <!-- Logo -->
               <div class="logo-top">
-                <a href="/" title="[Company] Careers" alt="[Company] Careers">
-                  <img src="img/site-logo.png" alt="[Company] Careers">
+                <a href="^site_language^/" title="[Company] Careers" alt="[Company] Careers">
+                  <img src="^media_src_logo.png^" alt="[Company] Careers">
                 </a>
               </div>
               <!-- End Logo -->
@@ -84,7 +79,7 @@
             <div class="col-xs-6 col-md-6">
               <!-- Join Our Talent Network -->
               <div class="join-top">
-                <a href="/join" class="btn btn-join" title="Join Our Talent Network">Join Our Talent Network</a>
+                <a href="^site_language^/join" class="btn btn-join" title="Join Our Talent Network">Join Our Talent Network</a>
               </div>
               <!-- End Join Our Talent Network -->
             </div>
@@ -93,35 +88,42 @@
         </div>
         <!-- End Navbar brand top -->
       </div>
-      <!-- End Container -->
+      <!-- End Tablet navbar -->
 
       <!-- Navbar default -->
       <nav class="navbar navbar-default" role="navigation">
         <!-- Container -->
-        <div class="container">
+        <div class="container flex-container">
 
           <!-- Navbar mobile -->
           <div class="navbar-header">
-            <!-- Navbar toggle -->
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
+            <!-- Navbar toggle (hamburger) -->
+            <button type="button" class="hamburger navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar top-bar"></span>
               <span class="icon-bar middle-bar"></span>
               <span class="icon-bar bottom-bar"></span>
             </button>
-            <!-- End Navbar toggle -->
+            <!-- End Navbar toggle (hamburger) -->
 
-            <!-- Logo desktop -->
-            <a href="/" class="navbar-brand visible-lg" title="[Company] Careers" alt="[Company] Careers">
-              <img src="img/site-logo.png" alt="[Company] Careers">
-            </a>
-            <!-- End Logo desktop -->
+            <!-- Mobile search button -->
+            <button type="button" class="navbar-toggle search-toggle-button-mobile collapsed" data-toggle="collapse" data-target="#SearchBoxMobile" aria-expanded="false" title="Search">
+              <span class="sr-only">Toggle search</span>
+              <i class="fa fa-search"></i>
+            </button>
+            <!-- End Mobile search button -->
 
             <!-- Logo mobile -->
-            <a href="/" class="navbar-brand visible-xs" title="[Company] Careers" alt="[Company] Careers">
-              <img src="img/site-logo-mobile.png" alt="[Company] Careers">
+            <a href="^site_language^/" class="navbar-brand visible-xs" title="[Company] Careers" alt="[Company] Careers">
+              <img src="^media_src_logo-mobile.png^" alt="[Company] Careers">
             </a>
             <!-- End Logo mobile -->
+
+            <!-- Logo desktop -->
+            <a href="^site_language^/" class="navbar-brand visible-lg" title="[Company] Careers" alt="[Company] Careers">
+              <img src="^media_src_logo.png^" alt="[Company] Careers">
+            </a>
+            <!-- End Logo desktop -->
           </div>
           <!-- End Navbar mobile -->
 
@@ -174,9 +176,12 @@
                 </a>
               </li>
               <!-- End Navigation -->
+
+              <!-- Join mobile -->
               <li class="visible-xs">
-                <a href="/join" title="Join Our Talent Network">Join Our Talent Network</a>
+                <a href="^site_language^/join" title="Join Our Talent Network">Join Our Talent Network</a>
               </li>
+              <!-- End Join mobile -->
             </ul>
             <!-- End Navbar nav -->
           </div>
@@ -190,22 +195,62 @@
   </header>
   <!-- End Header -->
 
-  <!-- Mobile search button -->
-  <button type="button" class="navbar-toggle search-toggle-button-mobile collapsed" data-toggle="collapse" data-target="#SearchBoxMobile" aria-expanded="false" title="Search">
-    <span class="sr-only">Toggle search</span>
-    <i class="fa fa-search"></i>
-  </button>
-  <!-- End Mobile search button -->
-
   <!-- Content page -->
-  <section class="content-banner hidden-4k">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 no-padding">
-          <img src="img/banner.png" class="img-responsive full-wd visible-4k" alt="Content banner">
-        </div>
+  <section class="content-banner">
+    <!-- Landing carousel -->
+    <div id="content-carousel" class="carousel slide custom-carousel carousel-fade hidden-xs" data-ride="carousel">
+
+      <!-- Indicators container -->
+      <div class="indicators-container">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#content-carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#content-carousel" data-slide-to="1"></li>
+          <li data-target="#content-carousel" data-slide-to="2"></li>
+        </ol>
+        <!-- End Indicators container -->
       </div>
+      <!-- End Indicators -->
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+
+        <div class="item active">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="container">
+            <div class="row">
+              <div class="col-xs-12 col-sm-12">
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- End Wrapper for slides -->
+
     </div>
+    <!-- End Landing carousel -->
+
   </section>
   <!-- End Content page -->
 
@@ -215,43 +260,71 @@
     <div class="search-box visible-xs">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-sm-12">
+          <div class="col-xs-12">
             <div class="search-box-content">
 
               <!-- Search bar -->
               <!-- ^tmp_elements=search_bar^ -->
-              <script type="text/javascript">
-              var countryDropdownEnabled = false;
-              </script>
-
-              <div id="search-bar" class="" ng-controller="SearchBarController">
-                <div class="search-bar-element search-field-container">
+              <div id="search-bar" class="ng-scope">
+                <div class="search-bar-element search-field-container search-bar-location-field">
                   <label for="search-keywords-field" class="hidden-xs search-bar-keyword-label label-text">Keyword:</label>
-                  <input id="search-keywords-field" type="text" class="search-bar-keyword-field form-control" ng-model="keywordInput"
-                  ng-keydown="checkKeywordKeydown($event)" placeholder="Job Title or Category">
+
+                  <input id="search-keywords-field" autocomplete="off" type="text" class="form-control search-bar-location-field  ng-pristine ng-untouched ng-valid" placeholder="Job Title or Category">
+
+                  <ul id="keyword-suggestions" class="list-group autocomplete-list suggestions-list ng-hide" role="list">
+                    <li ng-repeat-end="" class="autocompletefooter"></li>
+                  </ul>
                 </div>
+
                 <div class="search-bar-element search-field-container search-location-field">
                   <label for="search-location-field" class="hidden-xs search-bar-location-label label-text">Location:</label>
 
-                  <input id="search-location-field" autocomplete="off" type="text" class="form-control search-bar-location-field " ng-keydown="checkLocationKeydown($event)"
-                  ng-model="locationInput" ng-change="getSuggestions()" placeholder="City or Postal Code">
-                  <ul id="suggestions" class="list-group autocomplete-list suggestions-list" role="list" ng-show="locationSuggestions.length > 0" ng-cloak>
-                    <li ng-repeat="location in locationSuggestions" class="blockSpan list-group-item" ng-click="addToSelectedTags($index)"
-                    ng-mouseover="$parent.selectedIndex=$index" ng-class="{active : selectedIndex===$index}">{{$parent.googlePlacesAutocompleteEnabled ? location.description : location}}</li>
-                    <li ng-repeat-end class="autocompletefooter" ng-if="googlePlacesAutocompleteEnabled"><img src='/public/cms_base/img/powered_by_google_on_white.png' align='right'class='google-footer'></li>
+                  <input id="search-location-field" autocomplete="off" type="text" class="form-control search-bar-location-field  ng-valid ng-dirty ng-touched" placeholder="City or Postal Code" >
+
+                  <ul id="suggestions" class="list-group autocomplete-list suggestions-list hide-for-build-development" role="list" >
+                    <li class="blockSpan list-group-item ng-binding ng-scope" >Miami, FL, USA</li>
+                    <li class="blockSpan list-group-item ng-binding ng-scope active" >Miami Beach, FL, USA</li>
+                    <li class="blockSpan list-group-item ng-binding ng-scope" >Miami Gardens, FL, USA</li>
+                    <li class="blockSpan list-group-item ng-binding ng-scope">Miami Lakes, FL, USA</li>
+                    <li class="blockSpan list-group-item ng-binding ng-scope">Miami, OK, USA</li>
+
+                    <li class="autocompletefooter ng-scope"><img src="public/cms_base/img/powered_by_google_on_white.png" align="right" class="google-footer"></li>
                   </ul>
                 </div>
+
+                <div class="search-bar-element search-field-container search-location-field ng-hide">
+                  <label id="lblmultilocation" for="search-location-field_multi" class="hidden-xs search-bar-location-label label-text">Locations (up to 3):</label>
+
+                  <div class="ui-select-container ui-select-multiple ui-select-bootstrap dropdown form-control ng-valid" id="search-location-field_multi" limit="3" reset-search-input="true" sortable="true" close-on-select="false">
+                    <div>
+                      <span class="ui-select-match" id="suggestions_multi" placeholder="City or Postal Code"></span>
+                      <input type="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="ui-select-search input-xs ng-pristine ng-untouched ng-valid" placeholder="City or Postal Code" role="combobox" aria-expanded="false" aria-label="Select box" ondrop="return false;" style="width: 10px;">
+                    </div>
+
+                    <ul class="ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu ng-hide">
+                      <li class="ui-select-choices-group" id="ui-select-choices-1">
+                        <div class="divider ng-hide"></div>
+                        <div class="ui-select-choices-group-label dropdown-header ng-binding ng-hide"></div>
+                      </li>
+                    </ul>
+
+                    <div class="ui-select-no-choice"></div>
+                    <ui-select-multiple></ui-select-multiple>
+                  </div>
+                </div>
+
                 <div class="search-bar-element search-widget-container">
-                  <a ng-href="{{searchUrl()}}" id="primary-search-button" target="_top" class="search-btn primary-button text-center label-text">Search</a>
+                  <a id="primary-search-button" target="_top" class="search-btn primary-button text-center label-text" href="^site_language^/en-US/search">Search</a>
                 </div>
               </div>
               <!-- End Search bar -->
 
               <!-- View all jobs -->
-              <p class="link-center">
-                <a href="/search" class="view-all-jobs" title="View All Jobs at [Company]">View All Jobs at [Company]</a>
-              </p>
+              <div class="link-center">
+                <a href="^site_language^/search" class="view-all-jobs" title="View All Jobs at [Company]">View All Jobs at [Company]</a>
+              </div>
               <!-- End View all jobs -->
+
             </div>
           </div>
         </div>
@@ -267,44 +340,71 @@
     <div class="search-box">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-sm-12">
+          <div class="col-xs-12">
             <div class="search-box-content">
 
-              <h1>Search For Jobs</h1>
               <!-- Search bar -->
               <!-- ^tmp_elements=search_bar^ -->
-              <script type="text/javascript">
-              var countryDropdownEnabled = false;
-              </script>
-
-              <div id="search-bar" class="" ng-controller="SearchBarController">
-                <div class="search-bar-element search-field-container">
+              <div id="search-bar" class="ng-scope">
+                <div class="search-bar-element search-field-container search-bar-location-field">
                   <label for="search-keywords-field" class="hidden-xs search-bar-keyword-label label-text">Keyword:</label>
-                  <input id="search-keywords-field" type="text" class="search-bar-keyword-field form-control" ng-model="keywordInput"
-                  ng-keydown="checkKeywordKeydown($event)" placeholder="Job Title or Category">
+
+                  <input id="search-keywords-field" autocomplete="off" type="text" class="form-control search-bar-location-field  ng-pristine ng-untouched ng-valid" placeholder="Job Title or Category">
+
+                  <ul id="keyword-suggestions" class="list-group autocomplete-list suggestions-list ng-hide" role="list">
+                    <li ng-repeat-end="" class="autocompletefooter"></li>
+                  </ul>
                 </div>
+
                 <div class="search-bar-element search-field-container search-location-field">
                   <label for="search-location-field" class="hidden-xs search-bar-location-label label-text">Location:</label>
 
-                  <input id="search-location-field" autocomplete="off" type="text" class="form-control search-bar-location-field " ng-keydown="checkLocationKeydown($event)"
-                  ng-model="locationInput" ng-change="getSuggestions()" placeholder="City or Postal Code">
-                  <ul id="suggestions" class="list-group autocomplete-list suggestions-list" role="list" ng-show="locationSuggestions.length > 0" ng-cloak>
-                    <li ng-repeat="location in locationSuggestions" class="blockSpan list-group-item" ng-click="addToSelectedTags($index)"
-                    ng-mouseover="$parent.selectedIndex=$index" ng-class="{active : selectedIndex===$index}">{{$parent.googlePlacesAutocompleteEnabled ? location.description : location}}</li>
-                    <li ng-repeat-end class="autocompletefooter" ng-if="googlePlacesAutocompleteEnabled"><img src='/public/cms_base/img/powered_by_google_on_white.png' align='right'class='google-footer'></li>
+                  <input id="search-location-field" autocomplete="off" type="text" class="form-control search-bar-location-field  ng-valid ng-dirty ng-touched" placeholder="City or Postal Code" >
+
+                  <ul id="suggestions" class="list-group autocomplete-list suggestions-list hide-for-build-development" role="list" >
+                    <li class="blockSpan list-group-item ng-binding ng-scope" >Miami, FL, USA</li>
+                    <li class="blockSpan list-group-item ng-binding ng-scope active" >Miami Beach, FL, USA</li>
+                    <li class="blockSpan list-group-item ng-binding ng-scope" >Miami Gardens, FL, USA</li>
+                    <li class="blockSpan list-group-item ng-binding ng-scope">Miami Lakes, FL, USA</li>
+                    <li class="blockSpan list-group-item ng-binding ng-scope">Miami, OK, USA</li>
+
+                    <li class="autocompletefooter ng-scope"><img src="public/cms_base/img/powered_by_google_on_white.png" align="right" class="google-footer"></li>
                   </ul>
                 </div>
+
+                <div class="search-bar-element search-field-container search-location-field ng-hide">
+                  <label id="lblmultilocation" for="search-location-field_multi" class="hidden-xs search-bar-location-label label-text">Locations (up to 3):</label>
+
+                  <div class="ui-select-container ui-select-multiple ui-select-bootstrap dropdown form-control ng-valid" id="search-location-field_multi" limit="3" reset-search-input="true" sortable="true" close-on-select="false">
+                    <div>
+                      <span class="ui-select-match" id="suggestions_multi" placeholder="City or Postal Code"></span>
+                      <input type="search" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="ui-select-search input-xs ng-pristine ng-untouched ng-valid" placeholder="City or Postal Code" role="combobox" aria-expanded="false" aria-label="Select box" ondrop="return false;" style="width: 10px;">
+                    </div>
+
+                    <ul class="ui-select-choices ui-select-choices-content ui-select-dropdown dropdown-menu ng-hide">
+                      <li class="ui-select-choices-group" id="ui-select-choices-1">
+                        <div class="divider ng-hide"></div>
+                        <div class="ui-select-choices-group-label dropdown-header ng-binding ng-hide"></div>
+                      </li>
+                    </ul>
+
+                    <div class="ui-select-no-choice"></div>
+                    <ui-select-multiple></ui-select-multiple>
+                  </div>
+                </div>
+
                 <div class="search-bar-element search-widget-container">
-                  <a ng-href="{{searchUrl()}}" id="primary-search-button" target="_top" class="search-btn primary-button text-center label-text">Search</a>
+                  <a id="primary-search-button" target="_top" class="search-btn primary-button text-center label-text" href="^site_language^/en-US/search">Search</a>
                 </div>
               </div>
               <!-- End Search bar -->
 
               <!-- View all jobs -->
-              <p class="link-center">
-                <a href="/search" class="view-all-jobs" title="View All Jobs at [Company]">View All Jobs at [Company]</a>
-              </p>
+              <div class="link-center">
+                <a href="^site_language^/search" class="view-all-jobs" title="View All Jobs at [Company]">View All Jobs at [Company]</a>
+              </div>
               <!-- End View all jobs -->
+
             </div>
           </div>
         </div>
@@ -318,7 +418,7 @@
   <footer>
     <div class="container">
       <div class="row">
-        <div class="col-xs-12 col-sm-12">
+        <div class="col-xs-12">
           <h1 class="text-center text-white text-uppercase">Footer</h1>
         </div>
       </div>
@@ -326,8 +426,8 @@
   </footer>
   <!-- End Footer -->
 
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDX9bDtzse0NKvnFFtJOY-G3DJMwSuZzHg&libraries=places"></script>
-  <script type="text/javascript" src="assets/public/cms_base/version/935a51c32c21711dedacab4a6359b01c78d0912f/angular/scripts/tn_scripts.min.js"></script>
-
+  <!-- Replace CMS media flag -->
+  <script src="js/replaceMedia.js" charset="utf-8"></script>
+  <!-- End Replace CMS media flag -->
 </body>
 </html>
