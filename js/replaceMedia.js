@@ -22,12 +22,12 @@ $(document).ready(function() {
 
       // Get URL from Background CSS Property
       backgroundURL = backgroundURL
-        .replace(/.*\s?url\([\'\"]?/, "")
-        .replace(/[\'\"]?\).*/, "");
+      .replace(/.*\s?url\([\'\"]?/, "")
+      .replace(/[\'\"]?\).*/, "");
       // Get URL from Background-Image CSS Property
       backgroundImageURL = backgroundImageURL
-        .replace(/.*\s?url\([\'\"]?/, "")
-        .replace(/[\'\"]?\).*/, "");
+      .replace(/.*\s?url\([\'\"]?/, "")
+      .replace(/[\'\"]?\).*/, "");
 
       // If image is set in Background CSS property
       if (backgroundURL.match("^file:///")) {
@@ -41,10 +41,10 @@ $(document).ready(function() {
 
         // Replace ^media_src^
         backgroundURL = backgroundURL
-          .replace(thisPath + "/css/", "")
-          .replace("%5E", "")
-          .replace("%5E", "")
-          .replace("media_src_", "img/");
+        .replace(thisPath + "/css/", "")
+        .replace("%5E", "")
+        .replace("%5E", "")
+        .replace("media_src_", "img/");
 
         // Set image file
         $(this).css({ "background-image": "url(" + backgroundURL + ")" });
@@ -63,10 +63,10 @@ $(document).ready(function() {
 
         // Replace ^media_src^
         backgroundURL = backgroundURL
-          .replace(thisPath + "/css/", "")
-          .replace("%5E", "")
-          .replace("%5E", "")
-          .replace("media_src_", "img/");
+        .replace(thisPath + "/css/", "")
+        .replace("%5E", "")
+        .replace("%5E", "")
+        .replace("media_src_", "img/");
 
         // Set image file
         $(this).css({ "background-image": "url(" + backgroundURL + ")" });
@@ -91,12 +91,12 @@ $(document).ready(function() {
 
       // Get URL from Background CSS Property
       backgroundURL = backgroundURL
-        .replace(/.*\s?url\([\'\"]?/, "")
-        .replace(/[\'\"]?\).*/, "");
+      .replace(/.*\s?url\([\'\"]?/, "")
+      .replace(/[\'\"]?\).*/, "");
       // Get URL from Background-Image CSS Property
       backgroundImageURL = backgroundImageURL
-        .replace(/.*\s?url\([\'\"]?/, "")
-        .replace(/[\'\"]?\).*/, "");
+      .replace(/.*\s?url\([\'\"]?/, "")
+      .replace(/[\'\"]?\).*/, "");
 
       // If image is set in Background CSS property
       if (backgroundURL.match("^file:///")) {
@@ -110,10 +110,10 @@ $(document).ready(function() {
 
         // Replace ^media_src^
         backgroundURL = backgroundURL
-          .replace(thisPath + "/css/", "")
-          .replace("%5E", "")
-          .replace("%5E", "")
-          .replace("media_src_", "img/");
+        .replace(thisPath + "/css/", "")
+        .replace("%5E", "")
+        .replace("%5E", "")
+        .replace("media_src_", "img/");
 
         // Set image file
         $(this).css({ "background-image": "url(" + backgroundURL + ")" });
@@ -132,10 +132,10 @@ $(document).ready(function() {
 
         // Replace ^media_src^
         backgroundURL = backgroundURL
-          .replace(thisPath + "/css/", "")
-          .replace("%5E", "")
-          .replace("%5E", "")
-          .replace("media_src_", "img/");
+        .replace(thisPath + "/css/", "")
+        .replace("%5E", "")
+        .replace("%5E", "")
+        .replace("media_src_", "img/");
 
         // Set image file
         $(this).css({ "background-image": "url(" + backgroundURL + ")" });
@@ -165,9 +165,9 @@ $(document).ready(function() {
       if (imageSrc.indexOf("^media_src_") === 0) {
         // Replace ^media_src^
         imageSrc = imageSrc
-          .replace("^", "")
-          .replace("^", "")
-          .replace("media_src_", "/img/");
+        .replace("^", "")
+        .replace("^", "")
+        .replace("media_src_", "/img/");
         // Set image file
         $(this).attr("src", thisPath + imageSrc);
       }

@@ -422,10 +422,10 @@ header{
 
 		/// Navbar header
 		.navbar-header{
-			// float: left; /// <- Align logo content to left
-
 			float: none;
 			background-color: transparent;
+
+			// float: left; /// <- Align logo content to left
 
 			/// Navbar brand
 			.navbar-brand{
@@ -476,13 +476,13 @@ header{
 		ul.navbar-nav{
 			@include flex-navigation;
 
-			// float: right; /// <- Align navigation content to right
-
 			float: none;
 			padding-top: 0px;
 			padding-bottom: 0px;
 			margin: 0 auto;
 			// width: 100%;
+
+			// float: right; /// <- Align navigation content to right
 
 			li{
 				@include flex-child;
